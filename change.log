@@ -6,6 +6,71 @@
 
 
   ________
+[[ v0.3.6 ]]
+  ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-o7 ))
+
+Update:
+    Re-addressed the styling of the arrows of the "Expand Recent Lists" module.
+
+
+
+· (( 2o14-o5-o4 ))
+
+Cross-browser support:
+    More synchronization from Chrome to Opera.
+
+
+
+· (( 2o14-o5-o3 ))
+
+Bugfix & cross-browser support:
+    Successfully repaired the Opera version. Back to synchronization.
+
+
+
+· (( 2o14-o5-o2 ))
+
+Code structure:
+    Tested a potential new method to synchronize an existing localStorage with brand-new
+    preferences.
+
+
+
+· (( 2o14-o5-o1 ))
+
+Update:
+    Implemented a three-at-once intermediate solution for the Recent Lists list which, up
+    until now, showed either only three or *all* lists.
+
+
+New feature:
+    Quicken Date Paste. Translate and insert any date string information into the three
+    respective fields at once.
+
+
+Update:
+    New HTML styling for the "category tree" module.
+
+
+
+· (( 2o14-o4-3o ))
+
+Update & code optimization:
+    Re-addressed the "category tree" module (when editing a Page) to handle the new
+    element design. And also, to tweak it a little.
+
+
+Code cleanup:
+    "Officialized" some recent modules, without initially planned cross-browser
+    synchronization.
+
+
+Bugfix:
+    Excluded FLEX from running on jpg files and the like.
+
+
+  ________
 [[ v0.3.5 ]]
   ¯¯¯¯¯¯¯¯
 · (( 2o14-o4-29 ))
