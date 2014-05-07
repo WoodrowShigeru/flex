@@ -1,7 +1,7 @@
 FLEX – Favslist Expansion
 ====
 
-WoodrowShigeru
+by WoodrowShigeru
 
 
 Customize and expand your Favslist experience.
