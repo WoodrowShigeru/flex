@@ -8,10 +8,23 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
-· (( 2o14-o5-o7 ))
+· (( 2o14-o5-o8 ))
 
 Update:
-    Re-addressed the styling of the arrows of the "Expand Recent Lists" module.
+    Implemented a way to inject the next three *only if* the right-arrow-click "hits the
+    right border" of loaded elements.
+
+
+
+· (( 2o14-o5-o7 ))
+
+Development workflow:
+    Got into GitHub.  https://github.com/WoodrowShigeru/flex
+
+
+Update:
+    Re-addressed the styling and DOM structure of the arrows of the "Expand Recent Lists"
+    module.
 
 
 
