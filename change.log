@@ -8,6 +8,13 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-1o ))
+
+Update:
+    Super minor optimization of the module "Quicken Date Paste".
+
+
+
 · (( 2o14-o5-o8 ))
 
 Update:
@@ -81,6 +88,7 @@ Code cleanup:
 
 Bugfix:
     Excluded FLEX from running on jpg files and the like.
+
 
 
   ________
@@ -312,6 +320,7 @@ Update:
     click picks up the correct item.
 
 
+
   ________
 [[ v0.3.4 ]]
   ¯¯¯¯¯¯¯¯
@@ -365,6 +374,7 @@ Code structure:
 Bugfix (attempt):
     The Opera version is broken, every now and then any search will yield no results
     whatsoever, even if not a single module is activated. Wrong jQuery implementation …
+
 
 
   ________
@@ -495,6 +505,7 @@ Bugfix:
     choice (on the category "fictional character" it would always focus the YouTube field
     at the bottom, resulting in an unwanted scroll-jump). I've enhanced the functionality
     to also consider comboboxes of interest.
+
 
 
   ________
