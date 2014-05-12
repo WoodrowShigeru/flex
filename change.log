@@ -8,11 +8,18 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-12 ))
+
+Update:
+    Elegantly optimized the code for, and finished, the "Expand Recent Lists" module.
+
+
+
 · (( 2o14-o5-11 ))
 
 Update & bugfix:
-    Polish, fix and optimize the code for the "Expand Recent Lists" module. That was one
-    trivial-looking but stubborn bug, I might add.
+    Polished, fixed and optimized the code for the "Expand Recent Lists" module. That was
+    one trivial-looking but stubborn bug, I might add. Stress tests.
 
 
 
