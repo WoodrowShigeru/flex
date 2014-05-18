@@ -10,6 +10,11 @@
   ¯¯¯¯¯¯¯¯
 · (( 2o14-o5-18 ))
 
+Code structure:
+    Managed to synchronize with localStorage at the right time, but so far only in a
+    test environment.
+
+
 Bugfix:
     Kirk & co. added a new feature a few weeks ago, including a new "Embed" button which 
     screwed up my "Self Jumper" module a bit. I fixed that.
