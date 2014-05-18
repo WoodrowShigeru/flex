@@ -8,6 +8,13 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-18 ))
+
+Bugfix:
+    Kirk & co. added a new feature a few weeks ago, including a new "Embed" button which 
+    screwed up my "Self Jumper" module a bit. I fixed that.
+
+
 · (( 2o14-o5-15 ))
 
 New feature:
