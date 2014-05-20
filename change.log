@@ -8,6 +8,22 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-2o ))
+
+New feature:
+    Injectingly added access keys.
+
+
+Code structure:
+    Finally implemented a proper way to update the localStorage with new preferences upon
+    a fresh installation or update of FLEX.
+
+
+New feature:
+    Minor CSS tweak of my own CSS for the latest "highlight followup forum page" feature.
+
+
+
 · (( 2o14-o5-19 ))
 
 Code structure:
