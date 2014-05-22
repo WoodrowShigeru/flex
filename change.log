@@ -8,6 +8,14 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-22 ))
+
+Code structure:
+    Stress tests complete and install/update routine finally sorted out. Also sorted out 
+    the Chrome extension packaging, while I was at it.
+
+
+
 · (( 2o14-o5-2o ))
 
 New feature:
