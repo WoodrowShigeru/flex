@@ -10,6 +10,11 @@
   ¯¯¯¯¯¯¯¯
 · (( 2o14-o5-22 ))
 
+Code optimization:
+    Overhauled the "fix forum timestamps / anchor consider menu" module. … Meh, these
+    names are terrible.
+
+
 Code structure:
     Stress tests complete and install/update routine finally sorted out. Also sorted out 
     the Chrome extension packaging, while I was at it.
