@@ -8,6 +8,25 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-23 ))
+
+New feature:
+    Partially set up / repaired the import|export settings.
+
+
+Code structure & cross-browser support:
+    Unexpectedly optimized the localStorage handling *even further* via a more 
+    abstract and less browser-specific approach. Re-coded the preferences page, for 
+    ultimate cross-browser compatibility. Got the Opera version up to speed, with 
+    minor bugs left.
+
+
+Code optimization:
+    Optimized the "Toggle Spoiler title" module to also cover spoiler links that are 
+    added much later (i.e. in activity feed).
+
+
+
 · (( 2o14-o5-22 ))
 
 Code optimization:
