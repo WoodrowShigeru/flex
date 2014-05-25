@@ -8,6 +8,30 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-25 ))
+
+Code structure:
+    Re-modeled the Opera-specific content script. Now with less redundancy. Tried to
+    improve the naming convention system for my modules.
+
+
+Bugfix:
+    Made the scrolling in the "Highlight Timestamps" module work in both Chrome & Opera.
+
+
+
+· (( 2o14-o5-24 ))
+
+Code optimization, cross-browser-support & bugfix attempt:
+    Cleaned up and improved the code for the "Highlight Timestamps" module. Tried to 
+    fix a Chrome-Opera-cross-browser-related scrolling issue.
+
+
+Bugfix & cross-browser support:
+    Repaired the Opera version of the "Expand Recent Lists" module.
+
+
+
 · (( 2o14-o5-23 ))
 
 New feature:
