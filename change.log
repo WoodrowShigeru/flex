@@ -8,9 +8,17 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-27 ))
+
+Code optimization:
+    Encapuselated a redundant part of the "Quicken Date Paste" module. Added a 
+    sub-feature to also cover incomplete user input (i.e. only a year).
+
+
+
 · (( 2o14-o5-26 ))
 
-New feature:
+Code optimization & new feature:
     Polished the "Quicken Date Paste" module and implemented a tease for an already 
     planned update.
 
