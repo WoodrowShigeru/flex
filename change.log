@@ -8,6 +8,14 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-29 ))
+
+Bugfixes, cross-browser support & publish:
+    Stress tests and bug fixes for several recently touched modules. Opera 
+    synchronization.
+
+
+
 · (( 2o14-o5-27 ))
 
 Code optimization:
