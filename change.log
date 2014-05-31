@@ -8,6 +8,14 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-31 ))
+
+New feature:
+    Quickfix quick-n-dirty implementation of a new feature/module: "prevent the 
+    horizontal thumbnail bar from resetting when manually sorting a ranking list".
+
+
+
 · (( 2o14-o5-29 ))
 
 Bugfixes, cross-browser support & publish:
