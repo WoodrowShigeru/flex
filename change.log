@@ -8,6 +8,23 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o6-o8 ))
+
+Update:
+    Added a new AccessKey to enhance the "Quicken Date Paste" module.
+    
+
+New feature:
+    Started developing the previously planned "Track++" module. Got the number right
+    but cannot hook up the click event. (What's wrong?)
+    
+
+New feature (cont.):
+    Tested parts of the "Quicken Album Tracklist" module's procedure with a test run.
+    Tried to fire the search via  .keyup()  but no luck yet.
+
+
+
 · (( 2o14-o6-o4 ))
 
 New feature:
