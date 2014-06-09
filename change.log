@@ -8,6 +8,18 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o6-o9 ))
+
+Bugfix:
+    Re-addressed some older modules, such as "Detect Duplicates", and fixed various 
+    trivialities.
+
+
+New feature:
+    Implemented a functional way to paste an album tracklist for that module.
+    
+    
+
 · (( 2o14-o6-o8 ))
 
 Update:
