@@ -8,6 +8,13 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o6-14 ))
+
+New feature:
+    Enhanced the tracklist processing routine in the "Album Tracklist" module. Now
+    it can detect invalid lines and remove unwelcome side information.
+
+
 · (( 2o14-o6-o9 ))
 
 Bugfix:
@@ -16,7 +23,7 @@ Bugfix:
 
 
 New feature:
-    Implemented a functional way to paste an album tracklist for that module.
+    Implemented a functioning method to paste an album tracklist for that module.
     
     
 
