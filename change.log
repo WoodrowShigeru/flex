@@ -12,7 +12,8 @@
 
 New feature:
     Enhanced the tracklist processing routine in the "Album Tracklist" module. Now
-    it can detect invalid lines and remove unwelcome side information.
+    it can detect invalid lines and remove unwelcome side information. Also 
+    implemented "get out of the way" management.
 
 
 · (( 2o14-o6-o9 ))
