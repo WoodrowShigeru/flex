@@ -8,6 +8,16 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o6-16 ))
+
+New feature:
+    Continued working on a long-planned feature which I started ages ago, the 
+    "Previewable Miniboxes in Edit a Page environment" module. Successfully 
+    injected a functioning link that provides the feature, but injection doesn't 
+    happen automatic yet.
+
+
+
 · (( 2o14-o6-14 ))
 
 New feature:
