@@ -8,6 +8,15 @@
   ________
 [[ v0.3.6 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o7-19 ))
+
+Trivial new feature:
+    Fixed the broken styling for admins of fan pages. I'm talking about the
+    unintended horizontal scrollbar that appears if you hover over the brand
+    header.
+
+
+
 · (( 2o14-o7-1o ))
 
 New feature:
