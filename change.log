@@ -8,9 +8,18 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o7-31 ))
+
+New feature (attempt):
+    Tried to add thumbnails to the "quick-tag" feature, like I do with the
+    "Detect Duplicates" module. But the "quick-tag" feature is broken as 
+    hell.
+
+
+
 · (( 2o14-o7-28 ))
 
-New feature:
+New feature (cont.):
     Established the "Track++" module, making it easier to add tracks to 
     albums. Implemented the core functionality.
 
@@ -25,7 +34,7 @@ New feature:
 
 · (( 2o14-o7-2o ))
 
-New feature:
+New feature (cont.):
     Code cleanup of "SorFilCat", added target functionality i.e. "Filter by 
     Device Types".
 
@@ -46,7 +55,7 @@ Trivial new feature:
 
 · (( 2o14-o7-1o ))
 
-New feature:
+New feature (cont.):
     Continued "SorFilCat", fill the manufacturer's list dynamically and react
     appropriately to user selections in the range of "Filter by Manufacturer".
 
@@ -54,7 +63,7 @@ New feature:
 
 · (( 2o14-o7-o7 ))
 
-New feature:
+New feature (cont.):
     Continued "SorFilCat", data retrieval busy work, more acceptable styling.
 
 
@@ -76,7 +85,7 @@ Structure:
 
 · (( 2o14-o6-16 ))
 
-New feature:
+New feature (cont.):
     Continued working on a long-planned feature which I started ages ago, the 
     "Previewable Miniboxes in Edit a Page environment" module. Successfully 
     injected a functioning link that provides the feature, but injection doesn't 
@@ -86,7 +95,7 @@ New feature:
 
 · (( 2o14-o6-14 ))
 
-New feature:
+New feature (cont.):
     Enhanced the tracklist processing routine in the "Album Tracklist" module. Now
     it can detect invalid lines and remove unwelcome side information. Also 
     implemented "get out of the way" management.
@@ -99,7 +108,7 @@ Bugfix:
     trivialities.
 
 
-New feature:
+New feature (cont.):
     Implemented a functioning method to paste an album tracklist for that module.
     
     
