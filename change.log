@@ -8,6 +8,14 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o8-o2 ))
+
+New feature (cont.):
+    Repaired the buggy reset functionality of the "SorFilCat" module and 
+    made the sorting routine work.
+
+
+
 · (( 2o14-o7-31 ))
 
 New feature (attempt):
