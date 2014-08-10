@@ -8,9 +8,18 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o8-1o ))
+
+New feature (cont.):
+    Continuing work on a feature I started months ago, the miniboxes in an
+    Edit-a-Page environment search are now clickable like *outside* that 
+    environment – *while* maintaining the "select-to-add" functionality.
+
+
+
 · (( 2o14-o8-o9 ))
 
-New Feature:
+New feature:
     In the "Edit a Page" environment, I made a – what I think – better 
     version of the "Update" submit button. Now there is no need to have
     two of them.
