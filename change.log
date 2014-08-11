@@ -8,6 +8,17 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o8-11 ))
+
+New feature (attempt):
+    Tried to auto-select "Users+Brands" in the brand page environment. But 
+    failed.
+
+New feature (cont.):
+    Fixed a CSS bug for the "Album Tracklist" module.
+
+
+
 · (( 2o14-o8-1o ))
 
 New feature (cont.):
