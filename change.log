@@ -8,11 +8,29 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o8-16 ))
+
+Bugfix, new feature (cont.):
+    As JavaScript equals "null +1 === 1" to true, the initial state of the
+    "Track++" module didn't work with "1" as a starting point.
+
+
+Graphic design:
+    Updated the Chrome extension logo of FLEX a little bit with rounded corners.
+
+
+Bugfix, new feature (cont.):
+    My new mb_preview buttons in the edit-a-page environment weren't showing
+    on the music album tracklist category-tab. Code cleanup, too.
+
+
+
 · (( 2o14-o8-11 ))
 
 New feature (attempt):
     Tried to auto-select "Users+Brands" in the brand page environment. But 
     failed.
+
 
 New feature (cont.):
     Fixed a CSS bug for the "Album Tracklist" module.
