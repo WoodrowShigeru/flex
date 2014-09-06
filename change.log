@@ -8,6 +8,14 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-o9-o6 ))
+
+Trivial new feature:
+    Made the category say "Actor" or "Actress", respectively, instead of 
+    "Actor/Actress". (only when on a Page).
+
+
+
 · (( 2o14-o8-16 ))
 
 Bugfix, new feature (cont.):
