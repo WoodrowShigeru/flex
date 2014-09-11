@@ -11,6 +11,15 @@
 · (( 2o14-o9-11 ))
 
 New feature (cont.):
+    Tried to make the "Force click Brands n Users" module work. No success.
+
+
+Update & code optimization:
+    Checked out the "YouTube overlay bugfix" but I can't reproduce the initial
+    issue … (·· )ª
+
+
+New feature (cont.):
     Stress tested and finalized the Edit-a-Page (EAP) Submit button modification
     module.
 
