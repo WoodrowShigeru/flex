@@ -8,11 +8,25 @@
   ________
 [[ v0.3.7 ]]
   ¯¯¯¯¯¯¯¯
+· (( 2o14-1o-15 ))
+
+New feature (cont.):
+    Finished the 2-step hide aka "custom fold" of the "Quicken Album Tracklist" 
+    module.
+
+
+New feature (cont.) & optimization:
+    Prettified the user experience regarding the "Track++" module, if the
+    environment is loaded up with an empty tracklist. Also stress tests.
+
+
+
 · (( 2o14-1o-o7 ))
 
 New feature (cont.):
     Began to remove some annoyance and at the same time add a little bit more 
     elegance to the "Album Tracklist" module.
+
 
 
 · (( 2o14-o9-3o ))
