@@ -5,13 +5,14 @@
 **/
 
 
-  ________
-[[ v0.3.7 ]]
-  ¯¯¯¯¯¯¯¯
+  _________
+[[ v0.3.70 ]]
+  ¯¯¯¯¯¯¯¯¯
 · (( 2o14-1o-26 ))
 
-Cross-browser support:
-    Synchronized the Opera and Chrome versions.
+Cross-browser support & structure:
+    Synchronized the Opera and Chrome versions and renamed the version from
+    v0.3.7 to v0.3.70, implying a more intermediate step than before.
 
 
 
