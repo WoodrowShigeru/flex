@@ -10,9 +10,14 @@
   ¯¯¯¯¯¯¯¯¯
 · (( 2o14-1o-26 ))
 
+Release:
+    Published v0.3.70.
+
+
 Cross-browser support & structure:
     Synchronized the Opera and Chrome versions and renamed the version from
-    v0.3.7 to v0.3.70, implying a more intermediate step than before.
+    v0.3.7 to v0.3.70, implying a more intermediate step than before. Tried
+    to pay Google their stupid developers fee but they won't let me.
 
 
 
