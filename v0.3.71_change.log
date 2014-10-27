@@ -1,0 +1,25 @@
+
+/** v0.3.71_change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  _________
+[[ v0.3.71 ]]
+  ¯¯¯¯¯¯¯¯¯
+· (( 2o14-1o-26 ))
+
+Structure & module update:
+    Set up the v0.3.71 environment and implemented a few trivial things into
+    the "Quicken Album Tracklist" module.
+
+
+Organization & cross-browser support:
+    Looked into the current state of affairs in terms of Firefox, and 
+    re-organized a bunch of tickets and milestones. Gotta keep thinking in
+    baby steps.
+
+
+
+eof.
