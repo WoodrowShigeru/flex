@@ -1,0 +1,63 @@
+/** change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  ________
+[[ v0.3.4 ]]
+  ¯¯¯¯¯¯¯¯
+· (( 2o14-o4-o8 ))
+
+Code optimization:
+    Enhanced the  retrieve_YouTube_id()  module to also allow iFrame embeds. … Okay,
+    I admit it. I'm showing off a bit now ;^)
+
+
+Bugfix:
+    Quicken YouTube Paste messed with the user experience of the simple text field
+    functionalities. I also tried to create a custom "on-paste" event but … things
+    got complicated. So I put that out again.
+
+
+New feature:
+    Succeeded in disabling the automation of the Happening Now box.
+
+
+
+· (( 2o14-o4-o5 ))
+
+Code cleanup:
+    Stylesheet injection.
+
+
+New feature:
+    Tried to disable the aggressively annoying slideshow automation of the brand-new
+    Happening Now box.
+
+
+
+· (( 2o14-o4-o4 ))
+
+Update:
+    Continued work on the new Quicklinks Customization. CSS styling and setting up a
+    Quicklinks save system with localStorage.
+
+
+
+· (( 2o14-o3-31 ))
+
+Code structure:
+    Tried changing the structure to use RequireJS.
+
+
+
+· (( 2o14-o3-3o ))
+
+Bugfix (attempt):
+    The Opera version is broken, every now and then any search will yield no results
+    whatsoever, even if not a single module is activated. Wrong jQuery implementation …
+
+
+
+eof.
