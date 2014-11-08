@@ -1,0 +1,233 @@
+/** change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  ________
+[[ v0.3.6 ]]
+  ¯¯¯¯¯¯¯¯
+· (( 2o14-o5-29 ))
+
+Bugfixes, cross-browser support & publish:
+    Stress tests and bug fixes for several recently touched modules. Opera 
+    synchronization.
+
+
+
+· (( 2o14-o5-27 ))
+
+Code optimization:
+    Encapuselated a redundant part of the "Quicken Date Paste" module. Added a 
+    sub-feature to also cover incomplete user input (i.e. only a year).
+
+
+
+· (( 2o14-o5-26 ))
+
+Code optimization & new feature:
+    Polished the "Quicken Date Paste" module and implemented a tease for an already 
+    planned update.
+
+
+
+· (( 2o14-o5-25 ))
+
+Code structure:
+    Re-modeled the Opera-specific content script. Now with less redundancy. Tried to
+    improve the naming convention system for my modules.
+
+
+Bugfix:
+    Made the scrolling in the "Highlight Timestamps" module work in both Chrome & Opera.
+
+
+
+· (( 2o14-o5-24 ))
+
+Code optimization, cross-browser-support & bugfix attempt:
+    Cleaned up and improved the code for the "Highlight Timestamps" module. Tried to 
+    fix a Chrome-Opera-cross-browser-related scrolling issue.
+
+
+Bugfix & cross-browser support:
+    Repaired the Opera version of the "Expand Recent Lists" module.
+
+
+
+· (( 2o14-o5-23 ))
+
+New feature:
+    Partially set up / repaired the import|export settings.
+
+
+Code structure & cross-browser support:
+    Unexpectedly optimized the localStorage handling *even further* via a more 
+    abstract and less browser-specific approach. Re-coded the preferences page, for 
+    ultimate cross-browser compatibility. Got the Opera version up to speed, with 
+    minor bugs left.
+
+
+Code optimization:
+    Optimized the "Toggle Spoiler title" module to also cover spoiler links that are 
+    added much later (i.e. in activity feed).
+
+
+
+· (( 2o14-o5-22 ))
+
+Code optimization:
+    Overhauled the "fix forum timestamps / anchor consider menu" module. … Meh, these
+    names are terrible.
+
+
+Code structure:
+    Stress tests complete and install/update routine finally sorted out. Also sorted out 
+    the Chrome extension packaging, while I was at it.
+
+
+
+· (( 2o14-o5-2o ))
+
+New feature:
+    Injectingly added access keys.
+
+
+Code structure:
+    Finally implemented a proper way to update the localStorage with new preferences upon
+    a fresh installation or update of FLEX.
+
+
+New feature:
+    Minor CSS tweak of my own CSS for the latest "highlight followup forum page" feature.
+
+
+
+· (( 2o14-o5-19 ))
+
+Code structure:
+    Clarified the circumstances and created an even simpler, even more elegant solution.
+    The woodbox is now at the right state at the right time at the right locations.
+    Halfway there!
+
+
+
+· (( 2o14-o5-18 ))
+
+Code structure:
+    Managed to synchronize with localStorage at the right time, but so far only in a
+    test environment.
+
+
+Bugfix:
+    Kirk & co. added a new feature a few weeks ago, including a new "Embed" button which 
+    screwed up my "Self Jumper" module a bit. I fixed that.
+
+
+· (( 2o14-o5-15 ))
+
+New feature:
+    CSS triviality. I always overlook that there are follow-up thread pages whenever 
+    I follow a "subscribed thread" notification.
+
+
+
+· (( 2o14-o5-12 ))
+
+Update:
+    Elegantly optimized the code for, and finished, the "Expand Recent Lists" module.
+
+
+
+· (( 2o14-o5-11 ))
+
+Update & bugfix:
+    Polished, fixed and optimized the code for the "Expand Recent Lists" module. That was
+    one trivial-looking but stubborn bug, I might add. Stress tests.
+
+
+
+· (( 2o14-o5-1o ))
+
+Update:
+    Super minor optimization of the module "Quicken Date Paste".
+
+
+
+· (( 2o14-o5-o8 ))
+
+Update:
+    Implemented a way to inject the next three *only if* the right-arrow-click "hits the
+    right border" of loaded elements.
+
+
+
+· (( 2o14-o5-o7 ))
+
+Development workflow:
+    Got into GitHub.  https://github.com/WoodrowShigeru/flex
+
+
+Update:
+    Re-addressed the styling and DOM structure of the arrows of the "Expand Recent Lists"
+    module.
+
+
+
+· (( 2o14-o5-o4 ))
+
+Cross-browser support:
+    More synchronization from Chrome to Opera.
+
+
+
+· (( 2o14-o5-o3 ))
+
+Bugfix & cross-browser support:
+    Successfully repaired the Opera version. Back to synchronization.
+
+
+
+· (( 2o14-o5-o2 ))
+
+Code structure:
+    Tested a potential new method to synchronize an existing localStorage with brand-new
+    preferences.
+
+
+
+· (( 2o14-o5-o1 ))
+
+Update:
+    Implemented a three-at-once intermediate solution for the Recent Lists list which, up
+    until now, showed either only three or *all* lists.
+
+
+New feature:
+    Quicken Date Paste. Translate and insert any date string information into the three
+    respective fields at once.
+
+
+Update:
+    New HTML styling for the "category tree" module.
+
+
+
+· (( 2o14-o4-3o ))
+
+Update & code optimization:
+    Re-addressed the "category tree" module (when editing a Page) to handle the new
+    element design. And also, to tweak it a little.
+
+
+Code cleanup:
+    "Officialized" some recent modules, without initially planned cross-browser
+    synchronization.
+
+
+Bugfix:
+    Excluded FLEX from running on jpg files and the like.
+
+
+
+eof.
