@@ -1,0 +1,237 @@
+/** change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  ________
+[[ v0.3.5 ]]
+  ¯¯¯¯¯¯¯¯
+· (( 2o14-o4-29 ))
+
+Bugfix:
+    Quicklinks Customization was not working nicely upon a fresh FLEX installation.
+
+
+Publish:
+    Stress tests before publishing.
+
+
+Structure optimization:
+    Learned how to package my Chrome extension.
+
+
+New feature:
+    Provided checkboxes as options/preferences for my latest modules.
+
+
+New feature:
+    Finished the "fix timestamp displacement" module. At least enough to be published.
+
+
+
+· (( 2o14-o4-28 ))
+
+Bugfix (attempt):
+    Several attempts of fixing the suddenly inexplicably broken-again Opera version.
+    Somehow the config.xml file became unreadable.
+
+
+
+· (( 2o14-o4-26 ))
+
+Cross-browser support:
+    Returned to attempting to fix jQuery in Opera. … Success! Beginning synchronization
+    with Chrome's state of affairs.
+
+
+
+· (( 2o14-o4-25 ))
+
+Update:
+    Figured out how to replace the current quicklink radioboxes with dynamically created
+    ones based on a numeric array. Implementation. And I can FINALLY say that I concluded
+    the rough lion's share of the Customize Quicklinks module, now in (still buggy, but
+    nevertheless) epic drag & drop fashion!
+
+
+Update:
+    Created procedure concepts for localStorage synchronization as well as the Custom
+    Quicklinks feature.
+
+
+New feature:
+    Created a jsFiddle in order to dig into the trouble I'm having with the forum
+    timestamp gimmick effect.
+
+
+
+· (( 2o14-o4-24 ))
+
+New feature:
+    Tried to add a gimmick effect to the "fix forum timestamp displacement" feature.
+
+
+Styling:
+    Tweaked the appearance of the preferences/options page.
+
+
+Code optimization:
+    … mmmh nng … D'OH! *slaps forehead* I found a WAY easier method to execute EVERYTHING
+    about this left|right browsing module (›‹ )  Finished module, clean up and stress
+    test.
+
+
+Bugfix:
+    There are some usability cases where the left|right browsing feature should not be
+    fired.
+
+
+
+· (( 2o14-o4-23 ))
+
+Update:
+    Made the left|right browsing feature successfully identify valid and invalid
+    environments in most cases.
+
+
+Code cleanup:
+    Finalized the new Spoiler-toggling module.
+
+
+
+· (( 2o14-o4-22 ))
+
+New feature:
+    Started another fixing triviality, forum timestamp displacement due to the menu bar,
+    but then I figured that instead of creating a new module, this could be fixed in the
+    original FL script.
+
+
+New feature:
+    Another triviality: made the Spoiler links say "Hide" instead of "Show" when they're
+    opened.
+
+
+Update:
+    Played around with regular expressions in order to identify valid and invalid
+    environments for my left|right browsing feature.
+
+
+Structure optimization:
+    Tried to get my head around when and how to get and set all available instances of
+    each of my "preferences".
+
+
+
+· (( 2o14-o4-21 ))
+
+Code cleanup:
+    Official implementation, stress test, cleanup and optimization of the left|right
+    browsing feature. Started to expand this to all types of numbered pages— GOD! This
+    awful terminology!
+
+
+New feature:
+    Quite trivial. A mini CSS fix when viewing a Page.
+
+
+Debug:
+    Redirected the background page's console logs to somewhere where I can actually read
+    them.
+
+
+Update:
+    Quicklinks Customization: Successfully saved the dropped quicklinks in the
+    localStorage.
+
+
+
+· (( 2o14-o4-2o ))
+
+Graphic design:
+    Created more icons in a style matching the previously introduced question marks.
+
+
+New feature:
+    Continued a bit on the "Import|Export Preferences" functionality. Transport from/to
+    dedicated box with rudimentary styling.
+
+
+
+· (( 2o14-o4-18 ))
+
+New feature:
+    Expanded the Recent Lists list to be greater than three. … Quite greater.
+
+
+Code cleanup:
+    Tidied up yesterday's changes (and continued the changing) in the preferences page
+    script. And made the HTML code so god-damn beautiful! Got rid of the redundancies
+    and moved the code-convoluting explanations elsewhere.
+
+
+
+· (( 2o14-o4-17 ))
+
+Styling & code optimization:
+    Re-designed the preferences page and re-structured its JavaScript. I didn't know
+    before how I could implement jQuery here.
+
+
+Graphic design:
+    Created several versions of a question mark icon until I found one that I liked.
+
+
+Update:
+    Made the Quicklinks Customization feature load the custom Quicklinks that are saved
+    in the localStorage. At least in my own setup menu. Tried to save the user selection.
+
+
+
+· (( 2o14-o4-15 ))
+
+Update:
+    Solved the messaging/timing problem for the Quicklinks Customization feature.
+
+
+
+· (( 2o14-o4-13 ))
+
+Update:
+    Achieved reliable bi-directional dropping events for the Quicklinks Customization.
+
+
+
+· (( 2o14-o4-12 ))
+
+Update:
+    Stabilized the dragging experience of the Quicklinks Customization.
+
+
+Code cleanup:
+    Used less confusing localStorage values for my preferences.
+
+
+
+· (( 2o14-o4-1o ))
+
+New feature:
+    Began work on "Import|Export Preferences".
+
+
+Bugfix attempt:
+    Looking into that "re-installing FLEX doesn't properly load the user's custom
+    preferences" bug.
+
+
+
+· (( 2o14-o4-o8 ))
+
+Update:
+    Quicklinks Customization now uses drag & drop. I've made it work so that the mouse
+    click picks up the correct item.
+
+
+
+eof.
