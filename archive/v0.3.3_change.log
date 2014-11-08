@@ -1,0 +1,138 @@
+/** change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  ________
+[[ v0.3.3 ]]
+  ¯¯¯¯¯¯¯¯
+· (( 2o14-o3-29 ))
+
+Cross-browser support:
+    Synchronized the individual development states of Opera and Chrome.
+
+
+Bugfix (attempt) & code cleanup:
+    The general search feature seemed suddenly broken in Opera. Also, tried to optimize
+    the jQuery implementation.
+
+
+
+· (( 2o14-o3-28 ))
+
+Cross-browser support:
+    Got back into Firefox development. (It's so *different* …) Worked my way through
+    several tutorials and documentations. Set up the manifest and xul-files. First
+    packaging & installation attempts.
+
+
+Cross-browser support:
+    Split up the full package file for version 0.3.2 into separate entities for the
+    individual browsers and reserved an online location for future uploads.
+
+
+
+· (( 2o14-o3-27 ))
+
+Update:
+    Started creating a vastly improved user customization of the quicklinks.
+
+
+
+· (( 2o14-o3-26 ))
+
+Code optimization (attempt):
+    Attempted (but failed) to optimize the module-loading in Chrome. Cannot iterate in
+    a for-loop and avoid redundancy. 'twas worth a try.
+
+
+Graphic design:
+    Minorly updated the FLEX banner.
+
+
+Bugfix:
+    At times, Chrome failed to inject my script soon enough to catch the on-load-train.
+    That's because I used false jQuery implementation. Now it should be fixed for good.
+
+
+Update:
+    Implemented a newer version of jQuery, 1.11.0, and also figured out better jQuery
+    implementation.
+
+
+
+· (( 2o14-o3-18 ))
+
+Bugfix:
+    My aspect-ratio fix erroneously affected honorable mentions, too.
+
+
+
+· (( 2o14-o2-25 ))
+
+New feature:
+    Fix broken thumbnail aspect ratio. GODDAMNIT, FINALLY! That has been annoying me since
+    my first month on unikGamer. ("View someone's list" only).
+
+
+New feature:
+    Fix the long-ass Eligibility box whose faulty design has become super obvious with
+    the newest list "Inspirational People".
+
+
+Cross-browser support:
+    Working on the Firefox developer environment.
+
+
+
+· (( 2o14-o2-13 ))
+
+Bugfix:
+    The background script of my preferences page was actually called on *any* web page.
+    Instead of just the preferences page itself. This only happened in Opera.
+
+
+
+· (( 2o14-o2-12 ))
+
+New feature:
+    Enable navigating through the Recent Pages via the left|right arrow keys.
+
+
+Bugfix:
+    Fixed my feature "lose focus on submit" which wasn't working for input and textarea
+    elements.
+
+
+Bugfix:
+    Fixed browser detection in my preferences page (Opera and Chrome).
+
+
+New feature:
+    Submit forms with enter key (in Chrome, too, like you can in Opera *by default*).
+
+
+Bugfind:
+    Ugh! I was wrong. It's still unfixed, that Chrome-script-loading issue. Trying
+    (and failing) to reproduce it.
+
+
+
+· (( 2o14-o2-11 ))
+
+Bugfix (attempt):
+    Sometimes my script was called too late – when the document was already loaded – and
+    thus, failing to inject my modules, making it seem like the modules themselves were
+    buggy. (affected Chrome only)
+
+
+Bugfix:
+    Always focusing the first text field (when editing a Page) deemed to be an unwise
+    choice (on the category "fictional character" it would always focus the YouTube field
+    at the bottom, resulting in an unwanted scroll-jump). I've enhanced the functionality
+    to also consider comboboxes of interest.
+
+
+
+eof.
