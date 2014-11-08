@@ -1,0 +1,96 @@
+/** change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  ________
+[[ v0.3.2 ]]
+  ¯¯¯¯¯¯¯¯
+
+· (( 2o14-o2-o8 ))
+
+Graphic design:
+    Overhauled the logo.
+
+
+Description:
+    Added more textual explanations for my features.
+
+
+Cross-browser support:
+    Quick-n-dirtily synched Chrome's script structure with Opera's. Rudimentary feature
+    tests.
+
+
+
+· (( 2o14-o2-o6 ))
+
+Graphic design:
+    Created a better textual and visual explanation for some more of my features.
+
+
+Cross-browser support:
+    Add-on Builder for Firefox will soon be retired. Started setting up a new and
+    different type of developer environment.
+
+
+
+· (( 2o14-o2-o5 ))
+
+Code cleanup:
+    Implemented a favicon command for my preferences page. Further synched Opera's and
+    Chrome's preferences code, manifest file and general file structure.
+
+
+New feature:
+    Quick-n-dirtily implemented a fix for the YouTube overlay issue (in Opera).
+
+
+
+· (( 2o14-o2-o2 ))
+
+Graphic design:
+    Created a better textual and visual explanation for half of my features.
+
+
+Bugfix:
+    Showing the visual explanation in my preferences window flickers due to suboptimal
+    onmouseout-event-handling.
+
+
+Styling:
+    Re-designed the preferences page.
+
+
+
+· (( 2o14-o2-o1 ))
+
+Graphic design:
+    Created a new extension logo.
+
+
+Code cleanup:
+    Smartfully slimmened (›‹ ) … the background code for the preferences logic. And now
+    I can use the exact same code for both, Opera and Chrome, for faster and more elegant
+    cross-browser-coding.
+
+
+Bugfix:
+    On-mouse-over search results of mega-meta-master search caused an error if a ‹li›
+    other than li.result was being hovered (i.e. category header such as "People").
+
+
+New Feature:
+    Fixed broken submit of mega-meta-master search = block improper redirect to front page.
+    And at the same time, rather auto-redirect to the corresponding Page if the current
+    search yields exactly one search result.
+
+
+Code cleanup:
+     Created module.js, proper ordered segmentation of funcs, nice separator comments.
+     Further synched Opera and Chrome versions. Added a change.log file.
+
+
+
+eof.
