@@ -9,10 +9,26 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-11-19 ))
+
+Update module:
+    Edited a regular expression in the "Quicken Album Tracklist" module 
+    and modified the title recognition routine in general for better 
+    support of Wikipedia tracklists.
+
+
+
 · (( 2o14-11-16 ))
 
 New module:
     Finalized the "Categorize EAL" module, ready for QA.
+
+
+
+· (( 2o14-11-15 ))
+
+Organizing:
+    Restructured the change.log files.
 
 
 
