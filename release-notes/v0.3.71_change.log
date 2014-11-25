@@ -13,7 +13,12 @@
 
 Cross-browser support:
     Successfully installed the Firefox Addon SDK and created a test
-    extension.
+    extension. Also achieved the necessary URL matching and jQuery
+    implementation. Then tried porting one or two modules with similar 
+    success.
+    
+    Finally managed to pay the fee for Chrome Developers and drafted FLEX
+    in the official Chrome Web Store.
 
 
 
