@@ -9,6 +9,14 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-11-25 ))
+
+Cross-browser support:
+    Successfully installed the Firefox Addon SDK and created a test
+    extension.
+
+
+
 · (( 2o14-11-19 ))
 
 Update module:
