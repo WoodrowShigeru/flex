@@ -9,6 +9,18 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-11-27 ))
+
+Release:
+    Prepared the Chrome-only release on the official store.
+
+
+Bugfix:
+    Fixed trivial bugs in the "Quicken Album Tracklist" and "Hide Debug Box" 
+    modules.
+
+
+
 · (( 2o14-11-25 ))
 
 Cross-browser support:
