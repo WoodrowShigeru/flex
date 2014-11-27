@@ -11,6 +11,11 @@
 
 · (( 2o14-11-27 ))
 
+Cross-browser support:
+    Ported a few more modules over, from Chrome to Firefox. Figured out
+    resource-injection with content scripts.
+
+
 Release:
     Prepared the Chrome-only release on the official store.
 
