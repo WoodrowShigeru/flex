@@ -9,6 +9,14 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-12-18 ))
+
+Cross-browser support:
+    After having accidentally broken my package.json file for Firefox a few
+    days ago, today I finally managed to "repair" it.
+
+
+
 · (( 2o14-11-27 ))
 
 Cross-browser support:
