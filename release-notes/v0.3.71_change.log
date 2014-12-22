@@ -9,6 +9,14 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-12-22 ))
+
+Cross-browser support:
+    Aaaaand I fixed it again. This time, I *know* why package.json kept 
+    becoming  broken, so this shouldn't halt me again like this.
+
+
+
 · (( 2o14-12-2o ))
 
 Cross-browser support:
