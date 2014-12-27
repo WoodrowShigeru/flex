@@ -9,6 +9,15 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-12-27 ))
+
+Cross-browser support:
+    Figured out how to handle preferences in Firefox in order for my 
+    modules to trigger only when asked by the user.  Ported over the 
+    bulk of my modules, quick'n'dirtily.
+
+
+
 · (( 2o14-12-22 ))
 
 Cross-browser support:
