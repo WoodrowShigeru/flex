@@ -9,6 +9,14 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o14-12-29 ))
+
+Cross-browser support & bugfix:
+    Stress-tested the quick'n'dirtily implemented modules on Firefox.
+    The first batch. And optimized the preference descriptions.
+
+
+
 · (( 2o14-12-27 ))
 
 Cross-browser support:
