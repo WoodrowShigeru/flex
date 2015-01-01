@@ -9,6 +9,13 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o1-o1 ))
+
+Cross-browser support:
+    Fixed the "Custom Quicklinks" module in Firefox.
+
+
+
 · (( 2o14-12-29 ))
 
 Cross-browser support & bugfix:
