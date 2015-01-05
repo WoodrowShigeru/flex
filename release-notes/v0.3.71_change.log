@@ -9,6 +9,16 @@
 [[ v0.3.71 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o1-o5 ))
+
+Cross-browser support:
+    Fixed the "Expand Recent Lists" module in Firefox.
+
+    Quality Assurance for a lot of modules in the Edit-a-Page 
+    environment in Firefox.
+
+
+
 · (( 2o15-o1-o1 ))
 
 Cross-browser support:
