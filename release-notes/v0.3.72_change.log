@@ -1,0 +1,23 @@
+
+/** A change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  _________
+[[ v0.3.72 ]]
+  ¯¯¯¯¯¯¯¯¯
+
+· (( 2o15-o1-o6 ))
+
+Cross-browser support & bugfix:
+    Fixed the crappy design bug after using the "Categorize Edit-a-List" 
+    module and then ranking something. Fixed in Chrome.
+
+    Quality Assurance for modules of the Browse-Lists, Edit-a-List and
+    forum environment in Firefox.
+
+
+
+eof.
