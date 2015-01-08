@@ -9,6 +9,21 @@
 [[ v0.3.72 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o1-o8 ))
+
+Cross-browser support & bugfix:
+    Ported over yesterday's Chrome bugfix of "Categorize Edit-a-List"
+    to Firefox.
+
+    Fixed the sorting of my Filter modules ("Search or Create" and
+    "Recent Pages") not affecting both. Fixed in both, Chrome and
+    Firefox. Also, got rid of an accidentally produced error 
+    message.
+
+    Quality Assurance in Firefox for the final stretch of modules.
+
+
+
 · (( 2o15-o1-o6 ))
 
 Cross-browser support & bugfix:
