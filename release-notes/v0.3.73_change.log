@@ -1,0 +1,19 @@
+/** A change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  _________
+[[ v0.3.73 ]]
+  ¯¯¯¯¯¯¯¯¯
+
+· (( 2o15-o1-1o ))
+
+Cross-browser support:
+    This version is identical to v0.3.72 but Firefox insisted that
+    FLEX increased a tick after the review changes.
+
+
+
+eof.
