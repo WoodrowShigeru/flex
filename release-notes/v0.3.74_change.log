@@ -8,6 +8,16 @@
 [[ v0.3.74 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o2-21 ))
+
+Update, bugfix, cross-browser support & release:
+    Fixed the "Expand Recent Lists" module so that it can cope
+    with the official version.
+    
+    Also fixed a few bugs, i.e. I deactivated the experimental
+    new modules, before releasing this for Firefox & Chrome.
+
+
 · (( 2o15-o1-16 ))
 
 Trivial new feature:
