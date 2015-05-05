@@ -1,0 +1,26 @@
+/** A change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  _________
+[[ v0.3.75 ]]
+  ¯¯¯¯¯¯¯¯¯
+
+· (( 2o15-o5-o5 ))
+
+Update:
+    Updated the "Quicken Date Paste" module so that it can cope
+    with numerical months. And also added German and French
+    support.
+
+
+· (( 2o15-o5-o4 ))
+
+Update:
+    Added Japanese support to the "Quicken Date Paste" module.
+
+
+
+eof.
