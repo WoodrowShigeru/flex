@@ -11,6 +11,12 @@
 · (( 2o15-o5-o5 ))
 
 Bugfix:
+    Fixed the "Categorize EAL" module that was destroyed since 
+    Favsland's newest updates to the Edit-a-List environment 
+    (thumbnail, etc.). Fixed most of it, anyway.
+
+
+Bugfix:
     Fixed the "Provide Preview" link being hidden by the new
     thumbnail in the Edit-a-List environment.
 
