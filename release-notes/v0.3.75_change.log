@@ -10,6 +10,10 @@
 
 · (( 2o15-o5-o6 ))
 
+Cross-browser support, release:
+    Ported the new changes over to Firefox, tested and released it.
+
+
 Deprecation:
     Archived the now obsolete "Detect Duplicates" module.
 
