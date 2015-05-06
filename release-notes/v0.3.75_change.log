@@ -8,6 +8,18 @@
 [[ v0.3.75 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o5-o6 ))
+
+Deprecation:
+    Archived the now obsolete "Detect Duplicates" module.
+
+
+Quality assurance & bugfix:
+    Fine-tweaked the "Provide Preview Links" and "Categorize EAL" 
+    modules of the Edit-a-List environment.
+
+
+
 · (( 2o15-o5-o5 ))
 
 Bugfix:
@@ -25,6 +37,7 @@ Update:
     Updated the "Quicken Date Paste" module so that it can cope
     with numerical months. And also added German and French
     support.
+
 
 
 · (( 2o15-o5-o4 ))
