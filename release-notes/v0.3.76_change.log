@@ -1,0 +1,19 @@
+/** A change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  _________
+[[ v0.3.76 ]]
+  ¯¯¯¯¯¯¯¯¯
+
+· (( 2o15-o5-1o ))
+
+Bugfix:
+    Fixed the "gender to category" module which had stopped 
+    working at some point.
+
+
+
+eof.
