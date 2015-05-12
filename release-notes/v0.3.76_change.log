@@ -8,6 +8,14 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o5-12 ))
+
+Update:
+    Trivial improvement to the "Quicken Date Paste" module,
+    using the placeholder attribute for ‹input›.
+
+
+
 · (( 2o15-o5-1o ))
 
 Bugfix:
