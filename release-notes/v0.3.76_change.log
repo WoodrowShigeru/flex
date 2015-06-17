@@ -8,6 +8,14 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-o6-17 ))
+
+Bugfix:
+    Trivial improvement to the "Provide Preview" module,
+    prevented overlaying texts with long titles.
+
+
+
 · (( 2o15-o5-12 ))
 
 Update:
