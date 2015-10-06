@@ -8,13 +8,25 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-o6 ))
+
+Quality assurance:
+    Continued with the newest module, the preview pane. Grab
+    "category", too. Bugfixes. More styling. Stress tests.
+    Finalization.
+    
+
+Bugfix, minor update:
+    Slightly modified the "Article Readability" module.
+
+
 · (( 2o15-1o-o5 ))
 
 Structure:
     Tried a trival optimization of the environment detection.
     
 New feature:
-    Added a preview panel in the Edit-a-List environment for
+    Added a preview pane in the Edit-a-List environment for
     a way bigger image, a way more prominent representation
     when hovering over the list items.
 
