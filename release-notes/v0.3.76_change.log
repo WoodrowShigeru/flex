@@ -10,14 +10,21 @@
 
 · (( 2o15-1o-o6 ))
 
-Quality assurance:
+Quality assurance, finalization:
     Continued with the newest module, the preview pane. Grab
     "category", too. Bugfixes. More styling. Stress tests.
-    Finalization.
-    
+    Preferences integration. Animated explain-image.
 
 Bugfix, minor update:
     Slightly modified the "Article Readability" module.
+
+Structure:
+    Modified the options script so that individual stylings
+    for the explain-images becomes possible.
+
+Bugfix:
+    Quick-fixed the YouTube video-ID recognition submodule
+    for youtu.be-links (which now exclusively use https).
 
 
 · (( 2o15-1o-o5 ))
