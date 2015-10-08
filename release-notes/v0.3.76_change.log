@@ -8,6 +8,13 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-o8 ))
+
+Bugfix:
+    Fixed the bug in the new list search where the form was
+    submitted twice.
+
+
 · (( 2o15-1o-o7 ))
 
 New feature:
