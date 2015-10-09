@@ -8,6 +8,14 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-o9 ))
+
+New feature:
+    Rebuilt the quick'n'dirty placeholder GUI with a proper 
+    GUI for the new "Search for Lists" module. Also cleaned
+    its code.
+
+
 · (( 2o15-1o-o8 ))
 
 Bugfix:
