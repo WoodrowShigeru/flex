@@ -8,6 +8,17 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-12 ))
+
+Bugfix:
+    Fixed the new Preview Pane (when editing a List) showing
+    up if browsing a short list, and not re-appearing after
+    a non-drag click.
+
+    Also fixed a bug where the other new module, "Search for
+    Lists" didn't seem to work on certain parts of FL.
+
+
 · (( 2o15-1o-1o ))
 
 New feature:
