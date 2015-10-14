@@ -8,6 +8,15 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-14 ))
+
+New feature:
+    Added a new feature for the Edit-a-List environment,
+    letting users browse the left list in steps via clicks,
+    rather than with the mousewheel or the awkward slimScroll.
+    Worked out a proof of concept.
+
+
 · (( 2o15-1o-12 ))
 
 Bugfix:
