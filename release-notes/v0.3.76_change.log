@@ -8,13 +8,25 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-15 ))
+
+New feature (cont.), code cleanup, update:
+    Fleshed out the "Assisted Pagination" proof of concept,
+    deepened the logic functionality, defined the GUI, and
+    did some early stress tests.
+
+    Also updated an older module in the same environment and
+    similar functionality with sleeker logic, namely the reset
+    of the scrollTop.
+
+
 · (( 2o15-1o-14 ))
 
 New feature:
     Added a new feature for the Edit-a-List environment,
     letting users browse the left list in steps via clicks,
-    rather than with the mousewheel or the awkward slimScroll.
-    Worked out a proof of concept.
+    rather than with the mousewheel or the awkward slimScroll:
+    "Assisted Pagination". As a proof of concept, for now.
 
 
 · (( 2o15-1o-12 ))
@@ -30,14 +42,14 @@ Bugfix:
 
 · (( 2o15-1o-1o ))
 
-New feature:
+New feature (cont.):
     Added optimizations, convenience, and more to the
     "Search for Lists" module.
 
 
 · (( 2o15-1o-o9 ))
 
-New feature:
+New feature (cont.):
     Rebuilt the quick'n'dirty placeholder GUI with a proper 
     GUI for the new "Search for Lists" module. Also cleaned
     its code.
