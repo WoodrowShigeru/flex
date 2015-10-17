@@ -8,6 +8,14 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-17 ))
+
+New feature (cont.):
+    Added a functional pagination system to the module "Search 
+    for Lists". With some code optimization here and there
+    included.
+
+
 · (( 2o15-1o-15 ))
 
 New feature (cont.), code cleanup, update:
