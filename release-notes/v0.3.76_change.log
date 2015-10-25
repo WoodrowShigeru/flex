@@ -8,13 +8,24 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-25 ))
+
+New feature (cont.):
+    Finalized "Search for Lists".
+
+Structure:
+    Updated the Preferences gizmos, for more dynamic explain-image 
+    possibilities.
+
+
 · (( 2o15-1o-24 ))
 
-New feature (cont.), code cleanup, update:
+New feature (cont.), code cleanup:
     Improved usability and cleaned the code of the "Search for Lists"
     module. Also tried to add a submit-timer for people who don't
     even think of hitting ENTER.
 
+Update:
     Updated the YouTube ID extraction submodule to also support that
     "youtube-nocookie" nonsense.
 
