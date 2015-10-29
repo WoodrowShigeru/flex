@@ -8,6 +8,13 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-1o-29 ))
+
+New feature (cont.):
+    Made the "Assisted Pagination" module work in both directions:
+    down *and* up.
+
+
 · (( 2o15-1o-25 ))
 
 New feature (cont.):
