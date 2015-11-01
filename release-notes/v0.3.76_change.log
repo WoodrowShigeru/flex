@@ -10,8 +10,12 @@
 
 · (( 2o15-11-o1 ))
 
-New feature (cont.):
+New feature (cont.), cross-platform support, bugfix:
     Further fleshed out the new environment analysis.
+
+    Began porting the new FLEX features to Firefox.
+
+    Fixed a consistency bug in the "Scroll back up!" module.
 
 
 · (( 2o15-1o-29 ))
