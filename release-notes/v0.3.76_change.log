@@ -8,6 +8,12 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-11-o4 ))
+
+Bugfix:
+    Repaired the Firefox port of the "Preview Pane" module.
+
+
 · (( 2o15-11-o1 ))
 
 New feature (cont.), cross-platform support, bugfix:
