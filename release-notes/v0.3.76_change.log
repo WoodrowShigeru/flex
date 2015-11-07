@@ -10,12 +10,18 @@
 
 · (( 2o15-11-o7 ))
 
-Cross-browser support, bugfix, optimization:
+Bugfix, optimization:
     Added a number to the "Search for Lists" module that displays
     the amount of matched search results. And some other
     optimizations (like trimming term before searching).
 
+Cross-browser support:
     Ported the "Assisted Pagination" module to Firefox.
+
+Bugfix:
+    Fixed an internal bug on the preferences page of the Chrome 
+    port where ticking|unticking the checkboxes would break the
+    explain-img popups.
 
 
 · (( 2o15-11-o4 ))
