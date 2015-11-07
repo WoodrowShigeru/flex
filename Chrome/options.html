@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="icons/icon_256.png" sizes="256x256" />
+</head>
+
+<link rel="stylesheet" href="css/options.css?1.0.3" />
+
+
+<style type="text/css"></style>
+
+
+<body>
+
+	<div id="transport_box" class="overlay">
+		<h2>Transport</h2>
+		<p class="instruct">Instructions</p>
+		<p class="report">Status Report</p>
+		<textarea rows="10" cols="40"></textarea>
+		<label class="deactivated">
+			<input type="checkbox" name="bla" id="bla" class="deactivated" disabled />
+			Replace old completely or keep old settings, only remove deprecated preferences and update with new ones.
+			</label>
+		<input type="button" class="deactivated" value="Execute" id="go_port" disabled />
+	</div><!-- /#transport_box -->
+
+	<div id="explanation" class="overlay">
+
+		<h2>title</h2>
+		<img src="" width="350" height="400" alt="" />
+
+		<p>description</p>
+	</div><!-- /#explanation -->
+
+	<span id="infoline">
+		<span class="text">infoline</span>
+		<span class="butt"></span>
+	</span>
+
+
+
+	<div id="main">
+
+
+		<img src="img/FLEX-2-bannerized.jpg" id="header_banner" class="protective_box" width="500" height="200" alt="FLEX" style="margin-bottom: 30px;" />
+
+		<span id="loglink_frame" class="right_alignment free_text">
+			» <a href="https://github.com/WoodrowShigeru/flex/blob/master/change.log" target="_blank">view change.log</a>
+		</span>
+
+
+
+
+		<h1 class="free_text">Preferences</h1>
+
+		<p class="porting right_alignment free_text">
+			<a href="#" class="link_import ug_icon">Import</a>
+			<a href="#" class="link_export ug_icon">Export</a>
+		</p>
+
+		<div class="all_buttons protective_box">
+			<fieldset>
+				<label>
+					<input type="radio" name="all_checkboxes" value="on" />
+					<span class="title">Activate all</span>
+				</label>
+			</fieldset>
+			<fieldset>
+				<label>
+					<input type="radio" name="all_checkboxes" value="off" />
+					<span class="title">Deactivate all</span>
+				</label>
+			</fieldset>
+		</div><!-- /.all_buttons -->
+
+
+
+		<div class="fieldset_group protective_box">
+
+
+			<h2>General</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="hide_ticker" />
+					<span class="title">Hide ticker and social buttons</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="expand_clickarea" />
+					<span class="title">Expand click-area</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="fix_submit_search" />
+					<span class="title">Submit single search result, ignore submit if more results.</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="paint_history" />
+					<span class="title">Change generic "Favslist" in browser history</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="submit_with_enter" />
+					<span class="title">Submit forms with the enter key</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="leftright_paging" />
+					<span class="title">Browse with left|right arrow keys</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="toggle_spoilertitle" />
+					<span class="title">Adjust Spoiler-links</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="slapon_accesskeys" />
+					<span class="title">Attach accesskeys</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="edit_is_in_the_way" />
+					<span class="title">EDIT is in the way!</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="search_for_lists" />
+					<span class="title">Search for Lists</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /General -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Front Page</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="stop_happening" />
+					<span class="title">Stop "Happening Now" Automation</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Front Page -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Search or Create</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="soc_filter" />
+					<span class="title">Category Filter</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Search or Create -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Browsing /pages/</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="rp_filter" />
+					<span class="title">Category Filter for Recent Pages</span>
+				</label>
+				<span class="annotation ug_icon">(see "Search or Create")</span>
+			</fieldset>
+		</div>
+		<!-- /Browsing /pages/ -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Viewing a Page</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="viewpage_fixstyling" />
+					<span class="title">Fix styling</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="apply_gender_to_cat" />
+					<span class="title">Apply gender to category</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Viewing a Page -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Adding a Page</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="custom_quicklinks" />
+					<span class="title">Custom Quicklinks</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="radio_vs_quicklinks" />
+					<span class="title">Either Combobox or Quicklink</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Adding a Page -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Editing a Page</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="category_tree" />
+					<span class="title">Category Tree</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="yt_quickpaste" />
+					<span class="title">Clean paste of YouTube-links</span>
+				</label>
+				<span class="annotation ug_icon">This now triggers rather on leave than on keyup.</span>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="textfocus_on_tabswitch" />
+					<span class="title">Auto-focus form-field on tab-switch</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="losefocus_on_submit" />
+					<span class="title">Lose focus on submit</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="clickable_edit_minibox" />
+					<span class="title">Provide a preview link for each minibox in this environment</span>
+				</label>
+				<span class="annotation ug_icon">(alpha)</span>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="create_at_top" />
+					<span class="title">Closer "Quick Create" link</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="losefocus_trackno" />
+					<span class="title">Move focus when switching browser tabs (album tracklist)</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="date_quickpaste" />
+					<span class="title">Quick paste of dates</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="quicken_album_tracklist" />
+					<span class="title">Quicken Album Tracklist</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="track_plusplus" />
+					<span class="title">Track++</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="prevnext_category" />
+					<span class="title">Change category with keyboard</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="eap_submit" />
+					<span class="title">Edit-a-Page Submit</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Editing a Page -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Browsing /lists/</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="expand_recentlists" />
+					<span class="title">Expand Recent Lists</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="sorfilcat_gamingplats" />
+					<span class="title">Sort | filter | highlight "Gaming by System".</span>
+				</label>
+				<span class="annotation ug_icon">(alpha)</span>
+			</fieldset>
+		</div>
+		<!-- /Browsing /lists/ -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Editing a List</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="activate_abc" />
+					<span class="title">Activate ABC</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="editlist_fix_scrolltop" />
+					<span class="title">Scroll back up!</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="provide_preview" />
+					<span class="title">Provide Preview Link</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="article_readability" />
+					<span class="title">Article Readability</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="fix_long_eligibility" />
+					<span class="title">Fix the Height of the Eligibility Requirements</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="optimize_olist_jumper" />
+					<span class="title">Optimize the "Check another list" Jumper</span>
+				</label>
+				<span class="annotation ug_icon">(alpha)</span>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="categorize_eal" />
+					<span class="title">Categorize Edit-a-List</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="preview_pane" />
+					<span class="title">Preview Pane</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="assisted_pagination" />
+					<span class="title">Assisted Pagination</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Editing a List -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Visiting a User Profile</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="self_jumper" />
+					<span class="title">"View own List"</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="fix_thumb_aspectratio" />
+					<span class="title">Fix broken aspect ratio in thumbnails</span>
+				</label>
+				<span class="annotation ug_icon">(alpha)</span>
+			</fieldset>
+		</div>
+		<!-- /Visiting another User's Profile -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Forum</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="forumbox_vertscroll" />
+					<span class="title">Vertical scrollbar in post editor</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="anchor_consider_menu" />
+					<span class="title">Fix the forum timestamps</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="thereare_followupposts" />
+					<span class="title">There are follow-up posts!</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Forum -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Brands/Fans</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="fix_fanpage_admin" />
+					<span class="title">Fix the brand/fan page header</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Brands/Fans -->
+
+
+		<div class="fieldset_group collapsed protective_box">
+			<h2>Extra</h2>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="sort_filters" />
+					<span class="title">Sort my Category Filters</span>
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<label>
+					<input type="checkbox" name="debug_off" />
+					<span class="title">Hide debug box</span>
+				</label>
+			</fieldset>
+		</div>
+		<!-- /Extra -->
+
+
+	</div>
+	<!-- /#main -->
+
+
+<!-- script implementation at the end for better DOM loading vs. script timing results. -->
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="js/handle_woodbox.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+
+</body>
+</html>
