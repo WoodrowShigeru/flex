@@ -1,0 +1,1065 @@
+
+/* FLEX – Favslist Expansion */
+/* Stylesheet: style.css */
+/* Version: 1.0.8 = v0.3.80 */
+
+
+/*************************** General  *****/
+
+.wooden_container {
+	background: antiquewhite;
+	border: 1px solid #797979;
+	border-radius: 3px;
+	padding: 10px 20px 10px;
+}
+
+.wsh_right {
+	text-align: right;
+}
+
+
+
+
+
+/*************************** Customize Quicklinks *****/
+
+
+#wooden_a_cuqu_enter,
+#wooden_a_cuqu_leave {
+	float: right;
+}
+
+#wooden_cuqu_curtain {
+	display: none;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	background-repeat: repeat;
+}
+
+.wooden_cuqu_baseline {
+	width: 710px;
+	margin: 240px auto 0px;
+}
+
+#wooden_cuqu_pool,
+#wooden_cuqu_selection {
+	width: 200px;
+	border: 1px solid #303030;
+	float: left;
+	text-align: left;
+	padding: 10px;
+	background-color: antiquewhite;
+	margin-right: 50px;
+}
+
+#wooden_cuqu_pool {
+	border-radius: 20px 0px 0px 20px;
+	margin-left: 100px;
+}
+
+#wooden_cuqu_selection {
+	border-radius: 0px 20px 20px 0px;
+}
+
+.wooden_cuqu_overflow {
+	height: 300px;
+	overflow: auto;
+}
+
+#wooden_cuqu_pool li.wooden_draggable,
+#wooden_cuqu_selection li.wooden_draggable {
+	cursor: pointer;
+}
+
+#wooden_cuqu_pool li.wooden_draggable:hover,
+#wooden_cuqu_selection li.wooden_draggable:hover {
+	background-color: floralwhite;
+}
+
+.wooden_dragged {
+	position: absolute;
+	cursor: move !important;
+	border: 1px dotted darkgray;
+	background-color: blanchedalmond;
+	padding: 3px 15px;
+	z-index: 10000002;
+}
+
+
+
+@media (max-width: 1000px) {
+	.wooden_cuqu_baseline {
+/*		width: 500px;*/
+	}
+}
+
+
+
+/*************************** Stop Happening *****/
+
+div.slideshow-disabled-automation { margin: 0 0 20px 40px; width: 745px; height: 274px; background: #333333; border-radius: 4px 2px 2px 4px; overflow: hidden; }
+div.slideshow-disabled-automation ul.pagelist { display: inline-block; margin: 0; width: 188px; overflow: hidden; }
+div.slideshow-disabled-automation ul.pagelist li { cursor: pointer; }
+div.slideshow-disabled-automation h2 { margin: 0 10px 0 10px; padding: 9px 0 4px 0; font-family: BigNoodleTitling, Tahoma, Arial, sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; color: #cecece; border-bottom: 1px solid #6a6a6a; }
+div.slideshow-disabled-automation h2.right { display: inline-block; width: 168px; }
+div.slideshow-disabled-automation h2 a { color: #cecece; }
+div.slideshow-disabled-automation h2 span, div.slideshow-disabled-automation h2 a span { color: #999999; }
+
+div.slideshow-disabled-automation div.slides { position: relative; display: inline; float: left; margin: 0; width: 556px; height: 274px; border-right: 1px solid #808080; overflow: hidden; }
+div.slideshow-disabled-automation div.slide { position: relative; width: 556px; height: 274px; border-radius: 2px 0 0 2px; }
+div.slideshow-disabled-automation div.slide a.link { position: absolute; margin: 0; width: 556px; height: 274px; }
+div.slideshow-disabled-automation div.slide div.description { z-index: 1; position: absolute; margin: 177px 0 0 10px; width: 534px; height: 85px; background: #333333; border-radius: 2px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); opacity: 0.95; border: 1px solid #808080; overflow: hidden; }
+div.slideshow-disabled-automation div.slide div.description p { margin: 0 10px 0 10px; padding: 5px 0 8px 0; text-align: left; font-size: 11px; color: #cecece; }
+
+
+
+
+/*************************** Expand Recent Lists *****/
+
+.wooden_listoflists {
+	position: relative;
+}
+
+.wooden_listoflists .wooden_overflow {
+	overflow: hidden;
+	text-align: left;
+	margin: 0px 30px;
+}
+
+.wooden_listoflists .wooden_slider {
+	margin-left: 0px;
+}
+
+div.lasttop {
+	width: 270px !important;
+}
+
+.wooden_listoflists div.lasttop {
+	text-align: center;
+}
+
+.recentlist_arrow {
+	position: absolute;
+	top: 33%;
+	background-image: url(/img/editlist.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 20px;
+	height: 84px;
+}
+
+.wooden_listoflists .recentlist_arrow.arrow_left {
+	display: none;
+	left: 0px;
+	background-position: -480px -576px;
+}
+.wooden_listoflists .recentlist_arrow.arrow_right {
+	right: 0px;
+	background-position: -481px -664px;
+}
+.wooden_listoflists .recentlist_arrow.arrow_left:hover {
+	background-position: -480px -750px;
+}
+.wooden_listoflists .recentlist_arrow.arrow_right:hover {
+	background-position: -481px -838px;
+}
+
+
+
+
+
+
+/*************************** Category Tree *****/
+
+#tree_box {
+	background: antiquewhite;
+	border: 1px solid #797979;
+	border-radius: 3px 0px 0px 3px;
+	text-align: left;
+	margin-bottom: 30px;
+	padding: 10px 40px 10px 20px;
+	position: absolute;
+	top: 200px;
+	right: 60px;
+	max-width: 300px;
+	height: 500px;
+	overflow-y: auto;
+}
+
+#tree_box li {
+	color: #71A60A;
+	cursor: pointer;
+}
+#tree_box li:hover {
+	color: #92C72B;
+	text-shadow: 0px 0px 7px tan;
+}
+
+
+
+
+/*************************** Quicken Date Paste *****/
+
+.wooden_date_paste {
+	background-color: antiquewhite;
+	border: 1px solid #797979;
+	border-radius: 3px;
+	position: absolute;
+	top: 23px;
+	right: 240px;
+	padding: 10px;
+}
+
+.wooden_date_paste select {
+	font-size: 12px;
+	line-height: 15px;
+	height: 26px;
+	margin-right: 10px;
+}
+
+.wooden_date_paste input {
+	display: inline;
+	width: 150px;
+	height: 26px;
+	line-height: 15px;
+	font-size: 12px;
+	border: 1px solid #999999;
+	background-color: #fff;
+	padding: 0px 5px;
+}
+
+.date_paste_container {
+	position: relative;
+}
+
+
+
+
+
+/*************************** Debug *****/
+
+#wooden_output_container {
+	position: fixed;
+	z-index: 10000002;
+	top: 5px;
+	left: 15px;
+	padding: 12px 22px;
+	background: blanchedalmond;
+	border: 1px solid black;
+}
+
+#wooden_output_container h2 {
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-size: 17px;
+	font-family: Verdana;
+}
+
+
+
+/*************************** Videos Underscore *****/
+
+#videolist table input {
+	height: 13px !important;
+}
+
+
+
+/*************************** Highlight Followup Thread Pages *****/
+
+a.no.followup {
+	background-color: #bebebe;
+	color: #555;
+}
+
+
+
+
+/*************************** Self Jumper *****/
+
+.wooden_jump_wrapper {
+	float: right;
+	width: 52px;
+	margin-left: 6px;
+}
+
+a.bigbutton.jumper {
+	width: 40px;
+	line-height: 33px;
+	font-size: 10px;
+	text-align: center;
+	margin-left: 0px;
+}
+
+a.halfbig {
+	line-height: 11px !important;
+	height: 14px !important;
+}
+
+a.halfbig ~ a.halfbig {
+	margin-top: 5px !important;
+}
+
+span.no_list_msg {
+	display: inline-block;
+	margin-top: 70px;
+	margin-left: 100px;
+	margin-right: 20px;
+}
+
+
+
+
+/*************************** Quicken Album Tracklist *****/
+
+#wooden_tracklist_box {
+	position: fixed;
+	z-index: 2;
+	top: 300px;
+	max-width: 300px;
+	overflow-y: auto;
+	font-family: Tahoma;
+	font-size: 8px;
+	right: 60px;
+	top: 200px;
+	width: 300px;
+	height: 250px;
+	text-align: left;
+}
+
+#wooden_tracklist_box select,
+#wooden_tracklist_box textarea {
+	margin-top: -20px;
+	width: 100%;
+	height: 200px;
+}
+
+#wooden_tracklist_box select {
+	display: none;
+}
+
+#wooden_tracklist_box textarea {
+	max-width: 100%;
+	max-height: 200px;
+}
+
+#wooden_tracklist_box .button {
+	margin-top: 10px;
+	padding: 3px 8px;
+	border: 1px solid #444;
+	cursor: pointer;
+}
+
+#wooden_tracklist_box .button:hover {
+	background-color: #eee;
+}
+
+#wooden_tracklist_box .returner {
+	visibility: hidden;
+	background-color: antiquewhite;
+	top: 0px;
+	left: 0px;
+	width: 90px;
+	height: 20px;
+	margin: -5px auto 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+#wooden_tracklist_box .trimark {
+	visibility: hidden;
+}
+
+
+#wooden_tracklist_box.wsh_hidden {
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#wooden_tracklist_box.wsh_hidden:hover .trimark {
+	visibility: visible;
+}
+
+#wooden_tracklist_box.wsh_hidden .returner {
+	display: block !important;
+}
+
+#wooden_tracklist_box.wsh_hidden textarea,
+#wooden_tracklist_box.wsh_hidden select {
+	visibility: hidden;
+}
+
+@media (max-width: 600px) {
+
+  #wooden_tracklist_box {
+  	position: absolute;
+  	top: 11px;
+  }
+}
+
+
+
+
+
+/*************************** Previewable Miniboxes in Edit Page environment *****/
+
+.wooden_mb_preview {
+	display: none;
+	background-color: antiquewhite;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 33px;
+	right: 3px;
+	border: 1px solid #555;
+	border-radius: 3px;
+	cursor: pointer;
+	text-indent: -99999px;
+}
+
+.list .wooden_mb_preview.track_already {
+	right: 14px;
+}
+.list .wooden_mb_preview.track_added {
+	top: 10px;
+}
+
+.wooden_mb_preview:hover {
+	background-color: indianred;
+}
+
+.cat .list > div:not(.wooden_pauseplay_trackpp),
+.cat div.add {
+	position: relative;
+}
+
+
+
+
+
+
+/*************************** Sort-Filter-Categorize Gaming Lists *****/
+
+#wooden_sorfilcat {
+	background: antiquewhite;
+	border: 1px solid #797979;
+	border-radius: 3px;
+	margin-left: 30px;
+	padding: 10px 20px 10px;
+	top: -27px;
+	right: 340px;
+	width: 770px;
+}
+
+#wooden_sorfilcat select.verb {
+	margin-left: 50px;
+}
+
+.wooden_titlelinks {
+	font-size: 13px;
+	color: #5D9709 !important;
+}
+
+.wooden_plat_emph {
+	font-size: 15px !important;
+	display: inline !important;
+	float: none !important;
+	padding: 0px 10px !important;
+	height: auto !important;
+	line-height: normal !important;
+	text-align: left !important;
+	color: #71a60a !important;
+	border-left: none !important;
+	letter-spacing: 1.1px;
+}
+
+
+
+
+
+/*************************** EAP Submit *****/
+
+.wooden_EAP_submit {
+	position: fixed;
+	top: 160px;
+	left: 60px;
+}
+
+
+
+
+
+
+
+/*************************** Edit-a-Page Minibox Overflow *****/
+
+.wooden_eap_mb_overflow {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 175px;
+}
+
+
+
+
+
+
+/*************************** Track++ *****/
+
+.wooden_pauseplay_trackpp {
+	position: absolute;
+	background-color: antiquewhite;
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding: 2px 10px;
+	bottom: 4px;
+	left: 285px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.wooden_pauseplay_trackpp:hover {
+	border: 1px inset gray;
+}
+
+.wooden_pauseplay_trackpp .img {
+	background-repeat: no-repeat;
+	background-position: 0px 6px;
+	width: 9px;
+	margin-right: 3px;
+}
+
+.wooden_pauseplay_trackpp.paused .img {
+	background-position: -9px 6px;
+}
+
+.wooden_pauseplay_trackpp span {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+/*************************** "Share this status" popup *****/
+
+.ui-dialog .status .text {
+	overflow-y: scroll;
+	max-height: 500px;
+}
+
+
+
+
+
+
+
+/*************************** Edit-a-List Categories *****/
+
+#wooden_ealcat_list {
+	top: 51px;
+	left: 10px;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	padding: 0px;
+	font-size: 11px;
+	z-index: 20;
+}
+
+#wooden_ealcat_list ul {
+	width: auto;
+	padding: 0px 10px;
+	height: 100%;
+	overflow-y: scroll;
+/*background-color: tan;*/
+	margin-top: -22px;
+}
+
+#wooden_ealcat_list li {
+	color: black;
+	cursor: pointer;
+}
+
+#wooden_ealcat_list li:hover {
+	color: #555;
+}
+
+#wooden_ealcat_list input[type="button"] {
+	border: 1px solid black;
+	cursor: pointer;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	padding: 1px 5px;
+	margin: 6px 0px 0px 0px;
+}
+
+#wooden_ealcat_list input[type="button"]:last-child {
+	margin-right: 30px;
+}
+
+#ealcat_goaway:hover {
+	background-color: #eee;
+}
+
+#wooden_show_ealcat {
+	position: absolute;
+	cursor: pointer;
+	left: 4px;
+	top: 4px;
+	height: auto;
+	padding: 2px 5px 2px 7px;
+	font-weight: bold;
+	color: #303030;
+	background: -webkit-linear-gradient(antiquewhite, palegoldenrod);
+	background: linear-gradient(antiquewhite, palegoldenrod);
+	border-radius: 3px;
+	line-height: 19px;
+}
+
+.share .search.wsh_override {
+	position: relative;
+	padding-left: 45px;
+	width: 365px;
+}
+
+.share .search.wsh_override input[type="text"] {
+	width: 314px;
+}
+
+#wooden_ealcat_list li .cat_count {
+	color: #555;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+/*************************** Activate ABC Items *****/
+
+div.pagelist ul#alphabet li.wsh_abc_active a {
+	background-color: #cecece;
+	border-radius: 0px 4px 4px 0px;
+	width: 40px;
+	color: #333;
+	box-shadow: 4px 2px 10px #222;
+}
+
+
+
+
+
+/*************************** Fix Eligibility List *****/
+
+.fix_eligibility {
+	height: 120px !important;
+	overflow-y: auto !important;
+}
+
+
+
+
+
+
+
+/*************************** EDIT is in the way! *****/
+
+#content.wsh_edit_is_in_the_way div.back.status {
+	position: relative;
+}
+
+#content.wsh_edit_is_in_the_way div.statuslist .commentslist .status span.options {
+	bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+/*************************** Provide Preview-Link (Edit-A-List) *****/
+
+div.choicelist ul li {
+	position: relative;
+}
+
+div.choicelist .EAL_preview {
+	position: absolute;
+	top: 0px;
+	right: 150px;
+	color: #71A60A;
+}
+
+
+
+
+
+
+/*************************** Preview Pane (Edit-A-List) *****/
+
+div.editlist {
+	position: relative;
+}
+
+#wooden_preview_pane {
+	display: block;
+	background-color: seashell;
+	color: #212121;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	border-radius: 2px;
+	overflow: hidden;
+	text-align: center;
+	opacity: 1;
+	z-index: 50;
+
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+#wooden_preview_pane.hidden {
+	opacity: 0;
+}
+
+#wooden_preview_pane.debug {
+	opacity: 1 !important;
+	display: block !important;
+}
+
+div.wooden_prevpane_inner {
+	padding: 30px;
+}
+
+#wooden_preview_pane h2 {
+    margin: 0px 0px 20px;
+    padding: 0;
+    font-size: 26px;
+    line-height: 28px;
+    font-family: Calibri, Tahoma, Arial, sans-serif;
+    font-weight: normal;
+}
+
+#wooden_preview_pane .category-1 {
+	padding: 0;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+#wooden_preview_pane .category-1 .icon {
+	margin-right: 8px;
+}
+
+#wooden_preview_pane img.photo {
+    max-width: 340px;
+    max-height: 300px;
+    border: 3px solid #ececec;
+    box-shadow: 0 0 1px #000000;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+body.wsh_preview_pane_activated #cursorMessageDiv {
+	display: none !important;
+}
+
+
+
+
+/*************************** Search for Lists *****/
+
+#top ul.options li.sfl-search-lists {
+	display: inline-block;
+	padding: 0 15px 0 14px;
+}
+
+.sfl-hidden,
+#top ul.options li.sfl-hidden,
+#top ul.options #searchresults_for_lists li.sfl-hidden {
+	display: none;
+}
+
+#top ul.options li.sfl-search-lists input {
+	display: inline;
+	float: left;
+	padding: 4px 7px 5px 7px;
+	width: 390px;
+	height: 19px;
+	font-size: 13px;
+	line-height: 19px;
+	color: #555555;
+	border: 1px solid #303030;
+	border-right: 0;
+	border-radius: 2px;
+	background-color: blanchedalmond;
+}
+
+#top ul.options li.sfl-search-lists input.submit {
+	display: none;
+}
+
+#top li.sfl-search-lists a.submit {
+	position: absolute;
+	margin: 1px 0 0 -30px;
+	padding: 0;
+	width: 30px;
+	height: 28px;
+	background: url(/img/layers.png) no-repeat 0 -80px;
+}
+
+
+#searchresults_for_lists {
+	z-index: 1000;
+	position: absolute;
+	margin: 35px 0 0 1px;
+	padding: 0;
+	width: 394px;
+	background: #efefef;
+	border-radius: 2px;
+	box-shadow: 0 0 3px #000000;
+}
+
+#top #searchresults_for_lists:before {
+	content: "";
+	z-index: 10000;
+	position: absolute;
+	margin: -12px 0 0 10px;
+	width: 28px;
+	height: 12px;
+	background: url(/img/layers.png) no-repeat 0 -146px;
+}
+
+#top #searchresults_for_lists li {
+	display: block;
+	float: none;
+	margin: 0;
+	width: auto;
+	height: auto;
+	font-size: 11px;
+	line-height: 16px;
+	text-transform: none;
+	background: none;
+	border: 0;
+}
+
+#top #searchresults_for_lists li.info {
+	z-index: 2;
+	margin: 0;
+	padding: 0 8px 0 8px;
+	height: 24px;
+	font-size: 11px;
+	line-height: 24px;
+	font-weight: bold;
+	text-transform: none;
+	color: #747474;
+	background: -webkit-linear-gradient(#ededed, #e3e3e3);
+	background: linear-gradient(#ededed, #e3e3e3);
+	border-bottom: 1px solid #a1a1a1;
+
+	position: relative;
+}
+
+#top #searchresults_for_lists li.result {
+	padding: 7px;
+	height: 35px;
+	border-bottom: 1px solid #c3c3c3;
+	cursor: pointer;
+}
+
+#top #searchresults_for_lists li.sfl-no-match {
+	padding: 7px 8px 10px;
+	font-size: 11px;
+	line-height: 25px;
+}
+
+#searchresults_for_lists li.result a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#searchresults_for_lists li.result a span.sfl-text {
+	font-weight: bold;
+	color: #71a60a;
+}
+
+#searchresults_for_lists li.result a span.img {
+	display: inline;
+	background-image: url(/photos/pages/x2/no.png);
+	float: left;
+	margin: 1px 7px 0 0;
+	width: 30px;
+	height: 30px;
+	background-position: 50% 50%;
+	border: 1px solid #efefef;
+	box-shadow: 0 0 1px #000000;
+	border-radius: 2px;
+}
+
+
+
+#top ul.options li#sfl_toggler_reference {
+	position: absolute;
+	top: 18px;
+	left: 241px;
+	width: 387px;
+	height: 0px;
+}
+
+#top ul.options li#sfl_toggler_reference span {
+	position: absolute;
+	z-index: 210;
+	white-space: nowrap;
+	top: 0px;
+	right: 14px;
+	width: 65px;
+	height: 16px;
+	padding: 6px 8px;
+	background: -webkit-linear-gradient(antiquewhite, linen);
+	background: linear-gradient(antiquewhite, linen);
+	line-height: normal;
+	color: #71a60a;
+	cursor: pointer;
+	overflow: hidden;
+	border-left: 1px solid #999;
+
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	-ms-transition: width 0.3s;
+	-o-transition: width 0.3s;
+	transition: width 0.3s;
+}
+
+#top ul.options li#sfl_toggler_reference span.sfl-active {
+	width: 11px;
+	font-size: 19px;
+	line-height: 12px;
+}
+
+.sfl-close {
+	float: right;
+	cursor: pointer;
+	color: #AD9065;
+	padding: 5px;
+	width: 15px;
+	height: 15px;
+	line-height: normal;
+	text-align: center;
+	margin-right: -8px;
+}
+
+.sfl-close:hover {
+	color: #584830;
+}
+
+.sfl-pagination {
+	color: gray;
+	cursor: pointer;
+	float: right;
+	padding: 4px 20px;
+	width: 15px;
+	height: 15px;
+	line-height: 13px;
+	border: 1px solid transparent;
+	font-size: 14px;
+}
+
+.sfl-pagination.sfl-active {
+	color: #71a60a;
+}
+
+.sfl-pagination.sfl-active:hover {
+	-webkit-background: linear-gradient(gainsboro, #CECECE);
+	background: linear-gradient(gainsboro, #CECECE);
+	border: 1px inset #999;
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
+.sfl-length {
+	margin-left: 10px;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 8px;
+	font-weight: normal;
+	color: #222;
+}
+
+.sfl-length span {
+	vertical-align: baseline;   /* kirks rule doesn´t make sense here. */
+}
+
+
+
+
+
+
+
+/*************************** EAL Assisted Pagination *****/
+
+.apa-pagination {
+	position: absolute;
+	color: #354A0C;
+	padding: 0px 10px;
+	right: -33px;
+	cursor: pointer;
+	opacity: 1;
+	top: 50%;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-transition: color 0.2s, opacity 1s;
+	-moz-transition: color 0.2s, opacity 1s;
+	-ms-transition: color 0.2s, opacity 1s;
+	-o-transition: color 0.2s, opacity 1s;
+	transition: color 0.2s, opacity 1s;
+}
+
+.apa-pagination:hover {
+	color: #71a60a;
+}
+
+.apa-controller {
+	display: block;
+	background-color: #E6D9B3;
+	width: 10px;
+	height: 25px;
+	border: 1px solid #444;
+	text-align: center;
+	font-weight: bold;
+	font-size: 9px;
+	line-height: 25px;
+}
+
+.apa-hidden {
+	opacity: 0;
+}
+
+.apa-pagination.apa-up {
+	margin-top: -50px;
+}
+
+
+
