@@ -1,0 +1,396 @@
+{
+  "name": "flex",
+  "id": "jid1-LhhiCF9M4AmF7Q",
+
+  "title": "FLEX – Favslist Expansion",
+  "author": "Woodrow Shigeru",
+  "description": "Customize and expand your Favslist experience.",
+  "version": "0.3.81",
+
+  "homepage": "https://github.com/WoodrowShigeru/flex",
+  "icon": "data\\icon_256.png",
+  "license": "MPL 2.0",
+
+
+
+  "preferences": [
+  {
+    "name": "hide_ticker",
+    "title": "General » Hide ticker and social buttons",
+    "description": "I personally find them all annoying. Your call.",
+    "type": "bool",
+    "value": false
+
+
+  }, {
+    "name": "expand_clickarea",
+    "title": "General » Expand click-area",
+    "description": "You can now click on the *entire* box area, not just the text/image. This not only affects the items in the master-search but also those mini-boxes all over FL.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "fix_submit_search",
+    "title": "General » Submit single search result, ignore submit if more results.",
+    "description": "By FL default, if you submit a master-search it redirects you to the front page, regardless of the search results. I deactivated that. And as a bonus, single search results will be detected and handled accordingly. (buggy)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "paint_history",
+    "title": "General » Change generic \"Favslist\" in browser history",
+    "description": "Where possible, I dynamically replaced the generic text with something more informative.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "leftright_paging",
+    "title": "General » Browse with left|right arrow keys",
+    "description": "The Problem: The pagination of multi-page areas, i.e. forum threads, is often out of immediate reach. — My Solution: Now you can also go prev|next with the left|right arrow keys on your keyboard. Convenience!",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "toggle_spoilertitle",
+    "title": "General » Adjust Spoiler-links",
+    "description": "Togglingly adds a distinction between opened and closed spoilers, saying \"Hide\" instead of \"Show\".",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "slapon_accesskeys",
+    "title": "General » Attach accesskeys",
+    "description": "The Problem: Favsland doesn't use HTML accesskeys. — My Solution: I'll add some, then. — So far, only this: [s] —› master-search",
+    "type": "bool",
+    "value": true
+
+  }, {
+    "name": "search_for_lists",
+    "title": "General » Search for Lists",
+    "description": "I know that many have asked for this and I´ve made it happen: you can now textually search for available Lists.",
+    "type": "bool",
+    "value": true
+
+  }, {
+    "name": "stop_happening",
+    "title": "Front Page » Stop \"Happening Now\" Automation",
+    "description": "Stops the broken \"Happening Now\" box automation.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "soc_filter",
+    "title": "Search or Create » Category Filter",
+    "description": "Filter the search results by category. It dynamically offers only the categories that are present in the results.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "rp_filter",
+    "title": "Browsing /pages/ » Category Filter for Recent Pages",
+    "description": "Filter the Recent Pages by category.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "viewpage_fixstyling",
+    "title": "Viewing a Page » Fix styling",
+    "description": "Provide a minimum height for bare Pages that you can rate but have no comments or side info.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "apply_gender_to_cat",
+    "title": "Viewing a Page » Apply gender to category",
+    "description": "The Problem: The category always says \"Actor/Actress\" regardless of gender. — My Solution: I make it so that it instead says either \"Actor\" or \"Actress\", if possible.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "quicklinks",
+    "hidden": true,
+    "title": "The array of user-chosen Quicklinks.",
+    "type": "string",
+    "value": ""
+
+
+  }, {
+    "name": "custom_quicklinks",
+    "title": "Adding a Page » Custom Quicklinks",
+    "description": "The Problem: The current selection is too static and not suitable for everyone. — My Solution: Users can customize them themselves via a drag and drop overlay menu.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "radio_vs_quicklinks",
+    "title": "Adding a Page » Either Combobox or Quicklink",
+    "description": "Fixes that, most unfavorably, you can have both selected at the same time: a quicklink and a combobox item. Which messes up the subsequent navigation of the category tree.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "category_tree",
+    "title": "Editing a Page » Category Tree",
+    "description": "Provides an always-current, clickable, in-document-searchable tree representing the current category system in use in FL.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "yt_quickpaste",
+    "title": "Editing a Page » Clean paste of YouTube-links",
+    "description": "Conveniently reduces a full YouTube-link pasted from the clipboard (possibly containing additional playlist-/etc.-information) to the mere YouTube-ID. — (buggy in the \"Song › Music Clip\" field)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "textfocus_on_tabswitch",
+    "title": "Editing a Page » Auto-focus form-field on tab-switch",
+    "description": "When switching categories, automatically focus the first available text field for a faster editing workflow.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "losefocus_on_submit",
+    "hidden": true,
+    "title": "Editing a Page » Lose focus on submit",
+    "description": "DEACTIVATED — When submitting the form (with the Enter key) while you're inside an input field or combobox, automatically lose that focus. This makes it easier in Opera to use the hotkeys [1] and [2] to navigate to the neighbor tabs (and start editing the next prepared Page). Super convenient, imho.",
+    "type": "bool",
+    "value": false
+
+
+  }, {
+    "name": "clickable_edit_minibox",
+    "title": "Editing a Page » Provide a preview link for each minibox in this environment",
+    "description": "The Problem: Everywhere where shows up in the Favsland, you can click on a minibox and it'll take you to its Page. It acts like a link. Everywhere except in the Edit-a-Page environment (i.e. the search). Because clicking on the minibox rather \"selects\" it. — My Solution: I'm adding an extra button/link specifically in this environment. — (alpha)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "create_at_top",
+    "title": "Editing a Page » Closer \"Quick Create\" link",
+    "description": "When searching for other Pages while editing (i.e. a movie's actors), bring the 'Quick Create' link closer to the search field.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "losefocus_trackno",
+    "hidden": true,
+    "title": "Editing a Page » Move focus when switching browser tabs (album tracklist)",
+    "description": "DEACTIVATED — When editing an album's tracklist and leaving the browser tab, then returning (i.e. in order to fill the clipboard with the next track title), the focus is automatically moved from the track no. combobox to the text field.",
+    "type": "bool",
+    "value": false
+
+
+  }, {
+    "name": "date_quickpaste",
+    "title": "Editing a Page » Quick paste of dates",
+    "description": "The Problem: Dates are splitted into a combination of three comboboxes/fields, making copy & paste impossible. — My Solution: I'm adding an intermediate field that translates \"date strings\" into information that is comprehensible by these three comboboxes/fields.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "quicken_album_tracklist",
+    "title": "Editing a Page » Quicken Album Tracklist",
+    "description": "The Problem: The tracks of a music album have to be added, typed, copy-pasted, whatever-ed one by one. — My Solution: I replaced some of the typing with more convenient clicking.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "track_plusplus",
+    "title": "Editing a Page » Track++",
+    "description": "The Problem: When adding tracks to an album one by one, you have to manually set the track number, even though you're most probably adding the tracks in numerical order. — My Solution: I'm making that selection *for* the user, programmatically.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "prevnext_category",
+    "title": "Editing a Page » Change category with keyboard",
+    "description": "The Problem: Frequently having to change from using keyboard+mouse to using the keyboard alone back and forth can be a hassle if you're editing many Pages in succession. — My Solution: Change to the next|previous category content via an [ALT + PAGE-UP|DOWN] press.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "eap_submit",
+    "title": "Editing a Page » Edit-a-Page Submit",
+    "description": "I'm modifying the appearance of the Submit button in this environment.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "expand_recentlists",
+    "title": "Browsing /lists/ » Expand Recent Lists",
+    "description": "The Problem: The Recent Lists list lists only three lists. This is particularly a problem if you've been away from FL for more than a week and there have been quite a few new lists by now. — My Solution: I'm listing 'em all, in increments of three. But only if the user really wants to browse them.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "sorfilcat_gamingplats",
+    "title": "Browsing /lists/ » Sort | filter | highlight \"Gaming by System\".",
+    "description": "The Problem: Displaying all gaming platforms at once can be a bit overwhelming when you're searching something specific. — My Solution: I'm adding a few gizmos so that users can apply dynamic filters to the list. — (alpha)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "activate_abc",
+    "title": "Editing a List » Activate ABC",
+    "description": "Highlights the currently selected letter (if any).",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "editlist_fix_scrolltop",
+    "title": "Editing a List » Scroll back up!",
+    "description": "Make the left box scroll back up when a long list of new content is loaded.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "provide_preview",
+    "title": "Editing a List » Provide Preview Link",
+    "description": "Provides a convenient one-click way of opening a Page in another tab real quick, without the need to manually search or temporarily rank or anything.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "article_readability",
+    "title": "Editing a List » Article Readability",
+    "description": "Let users toggle between the notations \"The Example\" and \"Example, The\" – for better readability. (Unfortunately, can't make this setting permanent)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "fix_long_eligibility",
+    "title": "Editing a List » Fix the Height of the Eligibility Requirements",
+    "description": "The \"List Eligibility Requirements\" box tears apart the site design when it has long content.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "optimize_olist_jumper",
+    "title": "Editing a List » Optimize the \"Check another list\" Jumper",
+    "description": "Reduces the redundancy inside the \"jump to other lists\" combobox a bit, thus making it a bit prettier and easier to read. — (alpha)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "categorize_eal",
+    "title": "Editing a List » Categorize Edit-a-List",
+    "description": "The Problem: Browsing items you want to rank just alphabetically can be a bit of a hassle – especially since there's sometimes already a category at hand. — My Solution: I grab all the categories (*of the current selection!*) and list them in a clickable manner, so that only a segment is listed. I.e. all Britney Spears songs.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "preview_pane",
+    "title": "Editing a List » Preview Pane",
+    "description": "The Problem: The native preview thumbnail is great, but it often gets in the way. — My Solution: There's plenty of room on the right side. (See? I'm thinking *outside the box* ;^)",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "assisted_pagination",
+    "title": "Editing a List » Assisted Pagination",
+    "description": "The Problem: The super slim scroll bar is too awkward to use most of the times, especially without a mouse wheel (i.e. on notebooks). — My Solution: Without replacing anything, I add buttons to click, making it seem like you browse a continuous list *in paginated steps*. – Don't let the appearance fool you, btw. The click area is much more generous than the slim button makes it out to be.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "self_jumper",
+    "title": "Viewing a User Profile » \"View own List\"",
+    "description": "When browsing another user's list (any list) or the combined chart, provide a button to instantly jump to the display of your own list.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "fix_thumb_aspectratio",
+    "title": "Viewing a User Profile » Fix broken aspect ratio in thumbnails",
+    "description": "The Problem: Many thumbnails all over FL have a broken aspect ratio. — My Solution: I've started fixing this. For now, only when viewing a user's list.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "forumbox_vertscroll",
+    "title": "Forum » Vertical scrollbar in post editor",
+    "description": "Lets you scroll your unfinished posts! INSANITY ensues …",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "anchor_consider_menu",
+    "title": "Forum » Fix the forum timestamps",
+    "description": "The Problem: Hashtagged links, most prominently forum timestamps, are scrolled to the very top of the screen, which is the default browser behavior, but FL uses a menu bar that lies on top of everything, so the posts are always partly cut off. — My Solution: Make any forum timestamps consider the menu height. — As a bonus, I am also highlighting the post in question.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "thereare_followupposts",
+    "title": "Forum » There are follow-up posts!",
+    "description": "The Problem: Users often fail to notice that the last post display is in fact *not* the last post in the thread. The links/buttons are styled in gray, and gray on gray is hard to say— err, see. — My Solution: I am modifying the necessary CSS.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "fix_fanpage_admin",
+    "title": "Brands/Fans » Fix the brand/fan page header",
+    "description": "The Problem: The fan page header has broken CSS for fan page admins if you hover with the mouse over it. — My Solution: I'm fixing it.",
+    "type": "bool",
+    "value": true
+
+
+  }, {
+    "name": "sort_filters",
+    "title": "Extra » Sort my Category Filters",
+    "description": "Lets you sort my Category Filter alphabetically, instead of using the dynamic order in dependence of the Pages. — This option affects both filters, 'Search or Create' as well as 'Recent Pages'.",
+    "type": "bool",
+    "value": false
+
+
+  }, {
+    "name": "debug_off",
+    "title": "Extra » Hide debug box",
+    "description": "Woody forgot to hide his annoying crap (›‹ )",
+    "type": "bool",
+    "value": true
+
+
+  }
+  ]
+}
+
