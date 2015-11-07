@@ -18,10 +18,14 @@ Bugfix, optimization:
 Cross-browser support:
     Ported the "Assisted Pagination" module to Firefox.
 
-Bugfix:
+Bugfix, structure:
     Fixed an internal bug on the preferences page of the Chrome 
     port where ticking|unticking the checkboxes would break the
     explain-img popups.
+
+Optimization:
+    Modified the explain-img popup appearance on the preferences 
+    page on Chrome.
 
 
 · (( 2o15-11-o4 ))
