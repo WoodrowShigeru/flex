@@ -8,6 +8,16 @@
 [[ v0.3.76 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o15-11-o7 ))
+
+Cross-browser support, bugfix, optimization:
+    Added a number to the "Search for Lists" module that displays
+    the amount of matched search results. And some other
+    optimizations (like trimming term before searching).
+
+    Ported the "Assisted Pagination" module to Firefox.
+
+
 · (( 2o15-11-o4 ))
 
 Bugfix:
