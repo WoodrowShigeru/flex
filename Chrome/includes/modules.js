@@ -1,6 +1,6 @@
 
 /** modules.js
-*** Last Update: 2o15-11-o7
+*** Last Update: 2o15-11-o8
 *** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
 **/
 
@@ -460,7 +460,9 @@ function set_up_search_for_lists()
          // don't submit on command keys like CTRL, etc.
         case (
           $.inArray(key, [9,16,17,18,19,20,27,32,33,34,35,36,37,38,39,40,91,92,93,
-                          112,113,114,115,116,117,118,119,120,121,122,123,144,145]) != -1):
+                          112,113,114,115,116,117,118,119,120,121,122,123,144,145]
+          ) != -1
+        ):
           // do nothing.
           break;
 
@@ -474,7 +476,7 @@ function set_up_search_for_lists()
           timer = setTimeout(function(){
             var
               old_term = $sresults.data('represents_term'),
-              new_term = $input.val().toLowerCase()
+              new_term = $input.val()
             ;
             if (  timer                    // #1  time is up.
               &&  new_term                 // #2  term is non-empty.
@@ -629,25 +631,51 @@ function search_for_lists()
     $no_match = $sresults.find('.sfl-no-match'),
     $match_count = $sresults.find('.sfl-length span'),
     $set = $(),
-    term = $('.sfl-search-lists form input.search').val(),
+    original_input = $('.sfl-search-lists form input.search').val(),
+    terms = [],
     step = 10,
     results = [],   // a list of numerical IDs.
-    i, id, obj
+    i, id, obj,
+    does_match = true
   ;
   reset_sfl_results();
 
   try {
-    term = term.trim().toLowerCase();
-     // the actual search.
-    if ( term ) {
+    terms = original_input.trim().toLowerCase().replace( /  +/g, ' ' );
+    if (terms) {
+      terms = terms.split(' ');
+       // iterate over all lists.
       for (id in all_lists) {
-        if ( all_lists[id].title.toLowerCase().indexOf(term) != -1 ) {
+         // a AND b:
+         // we assume that it's a match by default and technically
+         // search for any mismatching component.
+        does_match = true;
+        i = 0;
+        while (  (i < terms.length)  &&  does_match  ) {
+          does_match = all_lists[id].title.toLowerCase().indexOf(terms[i]) != -1;
+          i++;
+        }
+        if (does_match) {
           results.push(id);
         }
-      }
-      $sresults.data('represents_term', term);   // for overriding the on-keyup timer.
+      }  // end of ( for each list )
 
-    }  // end of ( valid term )
+// a OR b:                                       // maybe I'll need it again some day.
+//      for (id in all_lists) {
+//        found = false;
+//        i = 0;
+//        while (  (i < terms.length)  &&  !found  ) {
+//          found = all_lists[id].title.toLowerCase().indexOf(terms[i]) != -1;
+//          i++;
+//        }
+//        if (found) {
+//          results.push(id);
+//        }
+//      }  // end of ( for each list )
+
+      $sresults.data('represents_term', original_input);   // for overriding the on-keyup timer.
+
+    }  // end of ( valid terms )
   }
   catch (ex) {
     results = [];
