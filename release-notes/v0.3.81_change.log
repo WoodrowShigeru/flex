@@ -1,0 +1,20 @@
+/** A change.log
+*** for FLEX — Favslist Expansion.
+*** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
+**/
+
+
+  _________
+[[ v0.3.81 ]]
+  ¯¯¯¯¯¯¯¯¯
+
+· (( 2o15-11-o8 ))
+
+Optimization:
+    Modified "Search for Lists" so that it treats the input as a
+    space-separated list of multiple terms rather than a single
+    term.
+
+
+
+eof.
