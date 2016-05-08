@@ -8,6 +8,20 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o5-o8 ))
+
+CSS Bugfix, new mini-feature:
+    Cleaned up a minor CSS issue (avatar image behind H1 text) 
+    within the "users" environment.
+
+Optimization:
+    Enhanced my environment analysis sub-module.
+
+CSS bugfixes:
+    Cleaned up minor CSS issues within my "Preview Pane", "Stop 
+    Happening" and "Hijack Logo" modules.
+
+
 · (( 2o15-12-o6 ))
 
 Optimization:
