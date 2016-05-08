@@ -21,6 +21,10 @@ CSS bugfixes:
     Cleaned up minor CSS issues within my "Preview Pane", "Stop 
     Happening" and "Hijack Logo" modules.
 
+JavaScript bugfixes:
+    Discovered and fixed a minor issue with the "Paint History"
+    module on some Pages.
+
 
 · (( 2o15-12-o6 ))
 
