@@ -8,6 +8,21 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o5-16 ))
+
+Code cleanup & structure (cont.):
+    Cleaned up the processes of "update localStorage upon
+    extension update" and "wake up woodbox upon browser
+    startup".
+
+    Made the contentscript receive and evaluate the
+    modified localStorage-woodbox interface.
+
+Update:
+    Added theprevention of an accidental text selection
+    to the "Search for Lists" module.
+
+
 · (( 2o16-o5-15 ))
 
 Structure (cont.):
