@@ -25,6 +25,8 @@ Update & bugfix:
     Also fixed that the accesskey gets lost when switching
     from "search for lists" back to the original search.
 
+    Tweaked the "Fix broken CSS when Viewing a Page" module.
+
 
 · (( 2o16-o5-15 ))
 
