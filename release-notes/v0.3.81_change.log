@@ -18,9 +18,12 @@ Code cleanup & structure (cont.):
     Made the contentscript receive and evaluate the
     modified localStorage-woodbox interface.
 
-Update:
-    Added theprevention of an accidental text selection
+Update & bugfix:
+    Added the prevention of an accidental text selection
     to the "Search for Lists" module.
+
+    Also fixed that the accesskey gets lost when switching
+    from "search for lists" back to the original search.
 
 
 · (( 2o16-o5-15 ))
