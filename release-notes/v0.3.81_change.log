@@ -8,6 +8,15 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o5-18 ))
+
+Structure (cont.):
+    Established and tested slightly different quicklinks structure.
+
+    Made the woodbox load the user preferences from localStorage
+    again.
+
+
 · (( 2o16-o5-16 ))
 
 Code cleanup & structure (cont.):
