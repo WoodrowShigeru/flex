@@ -8,6 +8,14 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o6-13 ))
+
+Structure (cont.):
+    Straightened the module updating/moving mess by reformatting
+    localStorage once again (but only a minor change this time).
+    Occam's razor.
+
+
 · (( 2o16-o6-o6 ))
 
 Structure (cont.):
