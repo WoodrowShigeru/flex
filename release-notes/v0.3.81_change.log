@@ -8,6 +8,13 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o6-26 ))
+
+Structure (cont.), quality assurance, code cleanup:
+    Finalized the code responsible for handling future updates to
+    the localStorage.
+
+
 · (( 2o16-o6-13 ))
 
 Structure (cont.):
