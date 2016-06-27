@@ -10,6 +10,16 @@
 
 · (( 2o16-o6-26 ))
 
+Bugfixes, structure (cont.):
+    Fixed loading false values from the storage when a module is
+    deprecated.
+
+    Fixed passing an empty woodbox to modify.js when NOT booting
+    Chrome or installing/updating FLEX.
+
+
+· (( 2o16-o6-26 ))
+
 Structure (cont.), quality assurance, code cleanup:
     Finalized the code responsible for handling future updates to
     the localStorage.
