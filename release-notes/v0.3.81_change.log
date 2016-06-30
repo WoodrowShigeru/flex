@@ -8,7 +8,14 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
-· (( 2o16-o6-26 ))
+· (( 2o16-o6-3o ))
+
+Structure (cont.):
+    Repaired the most basic functions of my Chrome Options page
+    after having restructured the woodbox.
+
+
+· (( 2o16-o6-27 ))
 
 Bugfixes, structure (cont.):
     Fixed loading false values from the storage when a module is
