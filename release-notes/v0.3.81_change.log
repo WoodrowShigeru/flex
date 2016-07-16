@@ -8,6 +8,13 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o7-16 ))
+
+Quick minor new feature:
+    Added a scrollbar to Pages with long "Wikipedia" texts
+    (in the "full view" popup).
+
+
 · (( 2o16-o7-12 ))
 
 Optimization:
