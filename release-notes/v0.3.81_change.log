@@ -8,6 +8,17 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o7-21 ))
+
+Structure:
+    Modified the Options page, modules that have sub settings
+    affect the respective checkboxes.  Repaired the
+    explanation-closing behavior.
+
+    Added the much needed get_sub and() set_sub() methods to
+    the woodbox.
+
+
 · (( 2o16-o7-2o ))
 
 New feature:
