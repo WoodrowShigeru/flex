@@ -8,11 +8,21 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o7-26 ))
+
+Update, structure, optimization:
+    Implemented the setter for the "Custom Quicklinks" in
+    accordance to the recent structure changes.
+
+    Optimized the yet to be released mini-module "EAP Clarify
+    Dragging".
+
+
 · (( 2o16-o7-24 ))
 
 Update, structure:
-   Repaired the raw functionality of the "Custom Quicklinks"
-   module – in the most quick-n-dirt and least elegant way.
+    Repaired the raw functionality of the "Custom Quicklinks"
+    module – in the most quick-n-dirt and least elegant way.
 
 
 · (( 2o16-o7-21 ))
