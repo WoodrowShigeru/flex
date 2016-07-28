@@ -8,6 +8,13 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o7-28 ))
+
+Structure:
+    Restructured the woodbox code to feature the factory 
+    method.
+
+
 · (( 2o16-o7-27 ))
 
 Structure:
