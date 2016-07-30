@@ -8,6 +8,14 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o7-3o ))
+
+Bugfixes:
+    Re-implemented the mandatory "Hijack Favslogo" module.
+
+    Repaired the document title of the options Page.
+
+
 · (( 2o16-o7-28 ))
 
 Structure:
