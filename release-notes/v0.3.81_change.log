@@ -8,6 +8,16 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o8-o6 ))
+
+Structure, bugfix:
+    Repaired the "de/activate all" functionality within the
+    options page.
+
+    Missed a spot of rewriting public function calls in 
+    handle_woodbox.
+
+
 · (( 2o16-o8-o1 ))
 
 Bugfix:
