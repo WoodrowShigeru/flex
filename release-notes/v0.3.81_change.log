@@ -8,6 +8,16 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o8-11 ))
+
+Bugfix, structure, tests:
+    Removed the "don't load from storage if woodbox.loaded"
+    logic. It caused bugs and wasn't necessary, anyway.
+
+    Tested the first modules after the major strucutural
+    changes.
+
+
 · (( 2o16-o8-o6 ))
 
 Structure, bugfix:
