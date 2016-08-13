@@ -8,6 +8,16 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o8-13 ))
+
+Tests, bugfix, optimization:
+    Tested more modules, from "Paint History" to "EDIT is
+    in the Way".
+
+    Found bugs in the "EDIT is in the Way" module, fixed
+    them and added more stability to it.
+
+
 · (( 2o16-o8-11 ))
 
 Bugfix, structure, tests:
