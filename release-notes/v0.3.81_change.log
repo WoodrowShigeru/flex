@@ -8,6 +8,23 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-o8-2o ))
+
+Tests, bugfixes, optimizations, structure, few feature (cont.):
+    Tested all remaining (old) modules. Updated my category
+    filters ("Search-or-Create Filter" and "Recent Pages
+    Filter") to handle the new woodbox structure.
+
+    Added handling of renamed modules when updating FLEX.
+
+    Polished the new modules "EAP Highlight Current Tab" 
+    and "Clarify Categories" for release.
+
+    Added minor tweaks to the Edit-a-Page environment in 
+    the environment analysis. Also added rudimentary 
+    environment detection for that fancy new iFrame.
+
+
 · (( 2o16-o8-13 ))
 
 Tests, bugfix, optimization:
