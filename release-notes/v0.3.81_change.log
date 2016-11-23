@@ -8,6 +8,13 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-11-22 ))
+
+New feature:
+    Added a new module "Crossreferencing Episodes".
+    Developed a working model from scratch.
+
+
 · (( 2o16-o8-2o ))
 
 Tests, bugfixes, optimizations, structure, new feature (cont.):
