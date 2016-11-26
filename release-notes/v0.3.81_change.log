@@ -8,6 +8,19 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-11-26 ))
+
+Graphic design, new feature (cont.), another new feature:
+    Created and implemented a new loading icon.
+    
+    Expanded the new module "Crossreferencing Episodes"
+    before it was even released to support other categories
+    as well. It shall be renamed into just "Crossreferencing".
+    
+    Added a new mandatory feature "Fix Broken Cascaded H2UL
+    Groups" and modified the classify() submodule.
+
+
 · (( 2o16-11-24 ))
 
 New feature (cont.):
