@@ -8,6 +8,15 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-11-28 ))
+
+New feature (cont.), bugfix:
+    Properly set up "Crossreferencing" as a new module.
+    
+    Finally found the culprit of a recent focus-stealing 
+    bug. And fixed that, of course.
+
+
 · (( 2o16-11-26 ))
 
 Graphic design, new feature (cont.), another new feature:
