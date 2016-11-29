@@ -8,6 +8,16 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-11-29 ))
+
+Quality assurance, code cleanup:
+    Made an important, kinda final test regarding the format
+    conversion of the woodbox and the Quicklinks settings.
+
+Cross-browser support:
+    Started porting FLEX from Chrome to Firefox.
+
+
 · (( 2o16-11-28 ))
 
 New feature (cont.), bugfix:
