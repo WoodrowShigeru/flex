@@ -8,6 +8,14 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-11-3o ))
+
+Structure, code cleanup:
+    Started overhauling the FLEX preferences page so that it
+    supports Chrome's fancy new design layout (which has been
+    made necessary for Firefox).
+
+
 · (( 2o16-11-29 ))
 
 Quality assurance, code cleanup:
