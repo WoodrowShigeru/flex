@@ -8,6 +8,14 @@
 [[ v0.3.81 ]]
   ¯¯¯¯¯¯¯¯¯
 
+· (( 2o16-12-o3 ))
+
+Bugfix, structure:
+    On the FLEX preferences pages, disabled the "Explain this!"
+    question-mark button for sub-settings items … since they
+    don't have an explanation.
+
+
 · (( 2o16-11-3o ))
 
 Structure, code cleanup:
