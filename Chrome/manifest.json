@@ -5,7 +5,7 @@
   "short_name": "flex",
   "description": "Customize and expand your Favslist experience.",
   "homepage_url": "https://github.com/WoodrowShigeru/flex",
-  "version": "0.3.80",
+  "version": "0.3.81",
   "author": "Woodrow Shigeru",
   "icons": {
     "256": "icons/icon_256.png"
@@ -13,7 +13,6 @@
   "background": {
     "scripts": [
       "js/handle_woodbox.js",
-      "js/prepare_modules.js",
       "js/background.js"
     ],
     "persistent": false
@@ -22,14 +21,23 @@
     "storage"
   ],
   "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": false
+  },
 
   "content_scripts": [
     {
+      "all_frames": true,
       "matches": [
         "http://www.favslist.com/*",
         "https://www.favslist.com/*",
         "http://favslist.com/*",
-        "https://favslist.com/*"
+        "https://favslist.com/*",
+        "http://woody.favslist.com/*",
+        "https://woody.favslist.com/*",
+        "http://embed.favslist.com/*",
+        "https://embed.favslist.com/*"
       ],
       "exclude_matches": [
         "http://*/*.jpg",
@@ -58,6 +66,7 @@
       "js/jquery.min.map",
       "img/black-curtain-diag-stroke.png",
       "img/logo-favsland.png",
-      "img/pause-play.png"
+      "img/pause-play.png",
+      "img/my-loading-03b.gif"
   ]
 }
