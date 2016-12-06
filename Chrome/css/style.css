@@ -1,7 +1,7 @@
 
 /* FLEX – Favslist Expansion */
 /* Stylesheet: style.css */
-/* Version: 1.0.8 = v0.3.80 */
+/* Version: 1.0.9 = v0.3.81 */
 
 
 /*************************** General  *****/
@@ -15,6 +15,38 @@
 
 .wsh_right {
 	text-align: right;
+}
+
+.flex_loading {
+	width: 20px;
+	height: 20px;
+	line-height: normal;
+	display: none;
+}
+
+
+
+
+
+
+
+/************************************ Classify *****/
+
+.flex_grouped_list {
+	float: left;
+	border: 1px solid #666;
+	border-radius: 2px;
+	margin: 0 20px 20px 0;
+	background-color: #F5F0BB;
+	padding: 10px;
+}
+
+.flex_grouped_list h2 {
+	margin: 0 0 10px;
+}
+
+.flex_grouped_list h3 {
+	margin: 10px 0 5px;
 }
 
 
@@ -104,7 +136,7 @@
 div.slideshow-disabled-automation { margin: 0 0 20px 40px; width: 745px; height: 274px; background: #333333; border-radius: 4px 2px 2px 4px; overflow: hidden; }
 div.slideshow-disabled-automation ul.pagelist { display: inline-block; margin: 0; width: 188px; overflow: hidden; }
 div.slideshow-disabled-automation ul.pagelist li { cursor: pointer; }
-div.slideshow-disabled-automation h2 { margin: 0 10px 0 10px; padding: 9px 0 4px 0; font-family: BigNoodleTitling, Tahoma, Arial, sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; color: #cecece; border-bottom: 1px solid #6a6a6a; }
+div.slideshow-disabled-automation h2 { margin: 0 10px 0 10px; padding: 9px 0 4px 0; font-family: Noodle, Tahoma, Arial, sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; color: #cecece; border-bottom: 1px solid #6a6a6a; }
 div.slideshow-disabled-automation h2.right { display: inline-block; width: 168px; }
 div.slideshow-disabled-automation h2 a { color: #cecece; }
 div.slideshow-disabled-automation h2 span, div.slideshow-disabled-automation h2 a span { color: #999999; }
@@ -114,7 +146,6 @@ div.slideshow-disabled-automation div.slide { position: relative; width: 556px; 
 div.slideshow-disabled-automation div.slide a.link { position: absolute; margin: 0; width: 556px; height: 274px; }
 div.slideshow-disabled-automation div.slide div.description { z-index: 1; position: absolute; margin: 177px 0 0 10px; width: 534px; height: 85px; background: #333333; border-radius: 2px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); opacity: 0.95; border: 1px solid #808080; overflow: hidden; }
 div.slideshow-disabled-automation div.slide div.description p { margin: 0 10px 0 10px; padding: 5px 0 8px 0; text-align: left; font-size: 11px; color: #cecece; }
-
 
 
 
@@ -666,6 +697,16 @@ div.pagelist ul#alphabet li.wsh_abc_active a {
 
 
 
+/*************************** Highlight current tab in Edit-a-Page *****/
+
+body.flex_eap_highlight_current_tab .flex_eap_hct_current {
+	border-bottom: 1px solid #648F14;
+}
+
+
+
+
+
 /*************************** Fix Eligibility List *****/
 
 .fix_eligibility {
@@ -681,12 +722,26 @@ div.pagelist ul#alphabet li.wsh_abc_active a {
 
 /*************************** EDIT is in the way! *****/
 
-#content.wsh_edit_is_in_the_way div.back.status {
+#flex.flex_edit_is_in_the_way .flex_lead_the_way {
 	position: relative;
 }
 
-#content.wsh_edit_is_in_the_way div.statuslist .commentslist .status span.options {
-	bottom: 8px;
+#flex.flex_edit_is_in_the_way .flex_lead_the_way span.options {
+	height: 18px;
+/*	right: 0;*/
+/*	bottom: 1px;*/
+	opacity: 1;
+	position: static;
+	float: right;
+	margin-left: 10px;
+}
+
+#flex.flex_edit_is_in_the_way .flex_lead_the_way span.options a {
+	color: #cecece;
+}
+
+#flex.flex_edit_is_in_the_way .flex_lead_the_way span.options a:hover {
+	text-decoration: none;
 }
 
 
@@ -768,7 +823,7 @@ div.wooden_prevpane_inner {
 	font-size: 15px;
 }
 
-#wooden_preview_pane .category-1 .icon {
+#wooden_preview_pane .category-1 .flex_icon {
 	margin-right: 8px;
 }
 
@@ -954,8 +1009,9 @@ body.wsh_preview_pane_activated #cursorMessageDiv {
 
 #top ul.options li#sfl_toggler_reference span.sfl-active {
 	width: 11px;
+	font-family: 'Tahoma', 'Arial';
 	font-size: 19px;
-	line-height: 12px;
+    line-height: 18px;
 }
 
 .sfl-close {
@@ -1059,6 +1115,211 @@ body.wsh_preview_pane_activated #cursorMessageDiv {
 
 .apa-pagination.apa-up {
 	margin-top: -50px;
+}
+
+
+
+
+
+/*************************** Fix CSS: View a Page *****/
+
+body.flex_cssfix_vap div.leftlist {
+	padding-bottom: 30px;
+}
+
+body.flex_cssfix_vap div.leftscore {
+	min-height: 60px;
+	height: auto;
+}
+
+
+
+
+
+/*************************** Fix CSS: Overlay description boxes (i.e. long "Wikipedia" texts) *****/
+
+.flex_cssfix_overlayboxes .ui-dialog .ui-dialog-content {
+	overflow-y: auto;
+	max-height: 650px !important;
+	height: auto !important;
+}
+
+
+
+
+
+/*************************** Edit-a-Page Clarify Categories *****/
+
+ul.flex_clarify_cats.catdrag li span.drag {
+	transition: width 0.3s, background-color 0.3s;
+	line-height: 25px;
+	overflow: hidden;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+}
+
+ul.flex_clarify_cats.catdrag li:first-of-type span.drag {
+	width: 90px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ul.flex_clarify_cats.catdrag li:first-of-type span.drag::before {
+	content: "default category";
+	white-space: nowrap;
+}
+
+ul.flex_clarify_cats.catdrag li:hover span.drag {
+	width: 70px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #eee;
+}
+
+ul.flex_clarify_cats.catdrag li:hover span.drag::before {
+	content: "change order";
+	white-space: nowrap;
+}
+
+
+
+
+
+/*************************** Embed Chatango *****/
+
+.flex_homechat {}
+
+
+
+
+/*************************** Crossreferencing *****/
+
+.flex_xreferencing_hoverable {
+	position: relative;
+	overflow: hidden;
+}
+
+.flex_xreferencing_controller {
+	position: absolute;
+	overflow: hidden;
+	top: -1px;
+	left: -102px;
+	width: 108px;
+	box-sizing: border-box;
+	height: 26px;
+	line-height: 26px;
+	z-index: 20;
+	border: 1px solid #444;
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+	background-color: antiquewhite;
+	padding: 0 10px 0 24px;
+	transition: left 0.3s;
+}
+
+.flex_xreferencing_hoverable:not(.flex_override):hover .flex_xreferencing_controller:not(.flex_uninitiated) {
+	left: 0;
+}
+
+.flex_xreferencing_controller .flex_bgone {
+	font-family: Arial;
+	font-size: 20px;
+	cursor: pointer;
+	display: inline-block;
+	width: 14px;
+	height: 24px;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-indent: -8px;
+	line-height: 22px;
+	padding: 2px 1px 2px 0;
+	padding-top: 2px;
+	padding-left: 0px;
+	padding-right: 1px;
+	border-right: 1px outset antiquewhite;
+	background-color: #e0dcd6;
+	color: #909090;
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	top: 0;
+}
+
+.flex_xreferencing_controller .flex_bgone:hover {
+	background-color: #909090;
+	color: #e0dcd6;
+}
+
+
+.flex_xreferencing_controller .flex_loading {
+	width: 16px;
+	height: 16px;
+	margin: 4px auto;
+}
+
+.flex_xreferencing_controller .flex_prev,
+.flex_xreferencing_controller .flex_next {
+	border-left: 1px solid antiquewhite;
+	border-right: 1px solid antiquewhite;
+	border-bottom: 0;
+	border-top: 0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	line-height: 22px;
+	box-sizing: border-box;
+	line-height: normal;
+	white-space: nowrap;
+	display: inline-block;
+
+	color: darkgray;
+	cursor: default;
+}
+
+.flex_xreferencing_controller .flex_prev {
+	padding-left: 9px;
+	padding-right: 13px;
+}
+
+.flex_xreferencing_controller .flex_next {
+	padding-left: 12px;
+	padding-right: 10px;
+}
+
+.flex_xreferencing_controller .flex_ahead_is_green.flex_prev,
+.flex_xreferencing_controller .flex_ahead_is_green.flex_next {
+	color: #71a60a;
+	cursor: pointer;
+}
+
+.flex_xreferencing_controller .flex_ahead_is_green.flex_prev:hover,
+.flex_xreferencing_controller .flex_ahead_is_green.flex_next:hover {
+	border-left: 1px inset #e2d8ca;
+	border-right: 1px inset #e2d8ca;
+	background-color: #e2d8ca;
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
+.flex_xreferencing_controller .flex_ahead_is_green.flex_prev:hover {
+	padding-left: 10px;
+	padding-right: 12px;
+}
+
+.flex_xreferencing_controller .flex_ahead_is_green.flex_next:hover {
+	padding-left: 13px;
+	padding-right: 9px;
+}
+
+
+
+.flex_xreferencing_controller.flex_processing .flex_prev,
+.flex_xreferencing_controller.flex_processing .flex_next {
+	display: none;
+}
+
+.flex_xreferencing_controller.flex_processing .flex_loading {
+	display: block;
 }
 
 
