@@ -1,11 +1,21 @@
 
 /** background.js
-*** Last Update: 2o14-o5-2o
+*** Last Update: 2o16-11-29
 *** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
 **/
 
+console.log('early bird', woodbox);   // is {} at this point (empty).
+
+
+ // on extension install (or update with new release).
  // hook up the listener early but implement it late, for timing reasons.
-chrome.runtime.onInstalled.addListener(try_getting_woodbox);
+chrome.runtime.onInstalled.addListener(try_updating);
+
+// https://developer.chrome.com/extensions/runtime#event-onInstalled
+// replace_old_db()
+
+ // on browser start (profile, actually).
+chrome.runtime.onStartup.addListener(try_waking_up_woodbox);
 
 
 
@@ -20,37 +30,49 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 
 
 
-
-  var response = 'invalid';
+  var response_letter = 'invalid';
+  var qnd_qlinks = null;   // TODO  clean up qnd.
 
    // preferences.
-  if ( request.method === 'getPreference' ) {
+  if ( request.method === 'getPreference' ) {   // TODO  obsolete
 
     if ( request.key ) {
-      response = localStorage[request.key];
+      response_letter = localStorage[request.key];
     }
   }
 
 
      // Quicklinks
-  else if ( request.method === 'getQuicklinks' ) {
-    response = localStorage.quicklinks;
+  else if (
+      (request.method === 'get')
+  &&  (request.module === 'custom_quicklinks')
+  ) {
+
+    response_letter = woodbox.get_quicklinks();
   }
 
-  else if (  (request.method === 'setQuicklinks')  &&  (request.key !== "")  ) {
+  else if (
+      (request.method === 'set')
+  &&  (request.module === 'custom_quicklinks')
+  &&  (request.key !== '')
+  ) {
+  //  localStorage.quicklinks = request.key;
+  //  response_letter = null;
 
-    localStorage.quicklinks = request.key;
-    response = null;
+    // ? woodbox.modules.custom_quicklinks.sub.set = request.key;
+    woodbox.set_sub('custom_quicklinks', 'set', request.key);
   }
 
 
-  else if ( request.method === 'getWoodbox' ) {
-    response = woodbox;
+  else if ( request.method === 'dear_woodbox' ) {
+    try_waking_up_woodbox();
+    response_letter = woodbox;
+    qnd_qlinks = woodbox.get_quicklinks();
   }
 
 
 
-  sendResponse({value: response});
+  sendResponse({value: response_letter , quicklinks: qnd_qlinks});
 });
 
 
@@ -91,13 +113,27 @@ function get_options_console()
 
 
 
- // sets up the woodbox.
-function try_getting_woodbox()
-{
+ // sets up the woodbox.//////
+function try_updating(){
+
+  console.log('trying to install/update FLEX.');
+
    // this is silly, but I need an intermediate step. I can't immediately call
-   // provide_woodbox()  – either due to timing or due to being split into
+   // provide_woodbox() – either due to timing or due to being split into
    // two files.
-  provide_woodbox();
+  woodbox.init();
+  woodbox.update();
+
+  console.log('update finished. The woodbox:', woodbox);
+}
+
+function try_waking_up_woodbox(){
+
+  console.log('trying to provide woodbox.');
+
+  woodbox.init();
+  woodbox.load();
+  console.log('provision finished', woodbox);
 }
 
 
