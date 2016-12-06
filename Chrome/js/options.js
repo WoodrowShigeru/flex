@@ -1,92 +1,434 @@
 
 /** options.js
-*** Last Update: 2o15-11-o7
+*** Last Update: 2o16-12-o5
 *** Woodrow Shigeru ( woodrow.shigeru@gmx.net )
 ***
-*** Encapsulate the process so that I can use the same code for both, Opera & Chrome (+moar).
+*** Encapsulate the process so that I can use the same code for both, Opera, Chrome +moar.
 **/
+;
+(function( $, flex, woodbox ){
+  console.log( '[FLEX] Hi, I´m flex://preferences – you can call me Johnny.' );
 
-console.log( 'Hello. I´m flex://js/options.js – you can call me Johnny.' );
+  var
+    preferences = {},
+    $explanation = $('#explanation')
+  ;
+
+  preferences = {
+
+    fx_times: {
+      fade: 300,
+      slide: 150,
+      before_expanding: 150,
+      after_collapsing: 250,
+      infoline: 150,
+    },
+
+    init: function(){
+      var
+        $groups = $('div.fieldset_group'),
+        $infoline = $('#infoline'),
+        $check = null
+      ;
+      woodbox.init();
+      woodbox.load();
+       // don't even try to start if the initiation went wrong.
+      if (  !woodbox  ||  !woodbox.instantiated  ||  !woodbox.loaded  ) {
+
+        console.log('[FLEX] Error: preference initiation went wrong.');
+        return false;
+      }
+
+
+       //----- bloat redundantly:  ‹input, set [id] := [name] /› -----//
+
+      $groups.find('input').each(function(){
+        var
+          $el = $(this),
+          $sub = $el.closest('.sub'),
+          main = $sub.siblings('.main').find('input').attr('id')
+        ;
+        if ( !$el.attr('id') ) {
+          $el.attr( 'id', $el.attr('name') );
+
+           // is sub.
+          if ($sub.length  &&  main) {
+            $el
+              .data('main', main)
+              .addClass('sub_formelement')
+            ;
+          }
+        }
+      });
+
+
+       //----- checkboxes: load from storage, set up interactivity -----//
+
+      $('.fieldset_group input[name]').each(function(){
+        var
+          $el = $(this),
+          m = this.id,
+          main = $el.data('main'),
+          module = woodbox.modules[m]  ? woodbox.modules[m]  : {}
+        ;
+        if (main  &&  woodbox.modules[main]) {
+          module = woodbox.modules[main];
+        }
+        if (module.deprecated) {
+          $el
+            .closest('fieldset')
+              .addClass('deprecated')
+              .attr('disabled', 'disabled')
+              .append('<span class="annotation ug_icon">Module deprecated.</span>')
+          ;
+        } else {
+          $el
+            .prop( 'checked', module.active )
+
+            .change(function(){   // ----- future scope!
+              var
+                $el = $(this),
+                $fieldset = $el.closest('fieldset'),
+                main = $el.data('main'),
+                sub_id = ''
+              ;
+               // is valid sub.
+              if ($el.is('.sub_formelement')  &&  woodbox.modules[main]) {
+                sub_id = this.id.replace( /^[^\-]+\-/, '');
+                woodbox.set_sub(main, sub_id, this.checked);
+
+               // is main (or standalone w/o sub).
+              } else {
+                woodbox.write_activity(this.id, this.checked);
+
+                if ( $fieldset.is('.main') ) {
+                  preferences.dis_or_enable_subgroup(this.id, this.checked);
+                }
+              }
+            })  // end of ( change func )
+          ;
+        }  // end of ( module not deprecated )
+        preferences.dis_or_enable_subgroup(m, module.active);
+
+          // TODO  On-change, I should send a message to update the woodbox in modify.js
+
+      });  // end of ( each ‹input› )
+
+
+       //----- set up the accordeon FX -----//
+
+      $groups.click(function(e){
+        var
+          $group = $(this),
+          $where_am_i = $(e.target)
+        ;
+         // exclude the child elements from the toggling functionality.
+         // Checkboxes still need to work as checkboxes.
+        if ($where_am_i.is('div.fieldset_group, h2')) {
+          $group.toggleClass('collapsed');
+        }
+      });
+
+
+       //----- inject question marks -----//
+
+      $groups.find('fieldset:not(.sub) label').after('<span class="help ug_icon">Explain this!</span>');
+      $('span.help').click(function(e){
+
+        preferences.explain(this);
+
+        e.stopPropagation();
+        return false;
+      });
+
+
+      //----- set up custom tooltips -----//
+
+      $('.ug_icon')
+        .mouseenter(function(e){
+          var
+            $src = $(e.target)
+          ;
+          $infoline
+             // content.
+            .find('.text')
+              .text( $src.text() )
+            .end()
+
+             // position.
+            .css({
+              left: $src.offset().left + $src.outerWidth() +2,
+              top:  $src.offset().top  -2
+            })
+
+             // visibility.
+            .stop()
+            .fadeIn(preferences.fx_times.infoline)
+          ;
+        })
+
+        .mouseleave(function(){
+          $infoline.stop().fadeOut(preferences.fx_times.infoline);
+        })
+      ;
+
+
+      //----- all or nothing: "de/activate all" buttons and mutual influence -----//
+
+      $('.all_buttons').each(function(){
+        var
+          $checks = $('.fieldset_group :checkbox'),
+          $on = $(':radio[name="all_checkboxes"][value="on"]'),
+          $off = $(':radio[name="all_checkboxes"][value="off"]')
+        ;
+
+         // make the checkboxes affect the radios.
+        $checks.change(function(){
+
+           // this.checked shows the result after the user clicked the checkbox.
+           // if any checkbox is activated by the user, untick the "deactivate all" radio (if ticked).
+          if (this.checked) {
+            $off.filter(':checked').prop('checked', false);
+          }
+
+           // if any checkbox is deactivated by the user, untick the "activate all" radio (if ticked).
+          else {
+            $on.filter(':checked').prop('checked', false);
+          }
+        });
+
+
+         // make the radios affect the checkboxes.
+        $on.add($off).click(function(){
+          $checks
+            .prop( 'checked', $(this).is($on) )
+            .each(function(){
+              var
+                $el = $(this),
+                main = $el.data('main'),
+                sub_id = ''
+              ;
+              if ($el.is('.sub_formelement')  &&  woodbox.modules[main]) {
+                sub_id = this.id.replace( /^[^\-]+\-/, '');
+                woodbox.set_sub(main, sub_id, this.checked);
+
+              } else {
+                woodbox.write_activity(this.id, this.checked);
+              }
+              preferences.dis_or_enable_subgroup(this.id, this.checked);
+
+            })  // end of ( each )
+          ;  // end of ( $checks chain )
+        });  // end of ( on+off on-click )
+      });  // end of ( each all_buttons: just a wrapper for local variable scope )
+
+
+      //----- header buttons -----//
+
+      $('.all_buttons .button').click(function(){
+        switch (this.name) {
+
+          case 'open_all_groups':
+          case 'close_all_groups':
+
+            if (this.name == 'close_all_groups') {
+              $groups.addClass('collapsed');
+            } else {
+              $groups.removeClass('collapsed');
+            }
+          break;
+
+          default:
+          break;
+        }   // end of ( switch-case: button name )
+      });
+
+
+      //----- set up peanuts -----//
+
+       // peanut #1
+      $(document).on('click', '#explanation .close', function(e){
+        preferences.stop_explaining();
+      });
+
+       // peanut #2
+      switch (flex.browser) {
+         // Opera
+        case 'o': {
+          console.log('[FLEX] Opera detected.');
+          break;
+        }  // end of ( Opera )
+
+
+         // Chrome
+        case 'c': {
+          console.log('[FLEX] Chrome detected.');
+
+           // put on some makeup.
+          var man;
+          if (chrome  &&  ( man = chrome.runtime.getManifest() )) {
+            document.title = 'FLEX Preferences v'+ man.version;
+          }
+          break;
+        }  // end of ( Chrome )
+
+
+         // Firefotz
+        case 'f': {
+          console.log('[FLEX] Firefox detected.');
+          break;
+        }  // end of ( Firefox )
+
+
+        default: {
+          console.log('[FLEX] unknown browser. Or maybe IE. I don´t care.');
+          break;
+        }
+      }  // end of ( switch-case browser )
+
+      //----------------------------------//
+
+
+
+      // TODO
+      // - head tools
+      //   - import/export
+
+    },  // end of ( func init )
+
+
+    stop_explaining: function(){
+      $explanation
+        .addClass('inlay_collapsed')
+        .delay(preferences.fx_times.after_collapsing)
+        .queue(function(){
+
+          $explanation
+            .remove()
+            .appendTo('#flimsy_elements')
+            .attr('class', 'inlay inlay_collapsed')
+            .dequeue()
+          ;
+        })
+      ;
+    },
+
+
+    explain: function( span ){
+      var
+        $label = $(span).siblings('label'),
+        m = $label.find('input').attr('id'),
+        this_exact_module_was_opened = $explanation.is('.'+m)
+      ;
+       // safety precaution.
+      if (  !woodbox  ||  !woodbox.modules  ||  !woodbox.modules[m]  ) {
+
+        console.log('[FLEX] Error: could not explain '+ m +'.');
+        return false;
+      }
+
+       // important: reset the classes of the ex element.
+      $explanation.attr('class', 'inlay');
+
+       // hide already opened shit.
+      if (!$explanation.parent().is('#flimsy_elements')) {
+        console.log('hiding already opened shit detected.');
+        preferences.stop_explaining();
+//        $explanation.dequeue();   // TODO  is this helpful or does it cause bugs?
+      }
+
+
+       // don't show at all if it was open already.
+      if (!this_exact_module_was_opened) {
+        $explanation.addClass(m);
+
+         // title.
+        $explanation.find('h2').text( $label.find('span.title').text() );
+
+         // image: reset classes.
+        $explanation.find('img').attr('class', '');
+
+        if ( woodbox.modules[m].imgSource != '' ) {
+          $explanation
+            .find('img')
+              .attr('src', 'img/'+ woodbox.modules[m].imgSource)
+              .show()
+          ;
+        }
+        else {
+          $explanation.find('img').hide();
+        }
+
+         // description.
+        if ( woodbox.modules[m].description != '' ) {
+          $explanation.find('p').html( woodbox.modules[m].description );
+        }
+
+         // box itself.
+        $explanation
+          .remove()
+          .insertAfter( $label.closest('fieldset') )
+          .delay(preferences.fx_times.after_expanding)
+          .queue(function(){
+            $explanation
+              .removeClass('inlay_collapsed')
+              .dequeue()
+            ;
+          })
+        ;  // end of ( $explanation chain )
+      }  // end of ( wasn't opened )
+    },  // end of ( preferences.explain )
+
+
+    dis_or_enable_subgroup: function( key, do_enable ){
+
+      $('fieldset.main').has('#'+key)
+        .siblings('.sub').attr('disabled', (do_enable  ? null  : 'disabled'))
+      ;
+    }
+
+  };  // end of ( plugin object declaration )
+
+
+  preferences.init();
+
+})(jQuery, flex, woodbox);
+
+
+
+
+
 
 var
-  fadingTime = 300,
-  slidingTime = 150;
+  fx_time_fade = 300,
+  fx_time_slide = 150
+;
 
 
  // ============================================ //
  // ===== intializes the preferences page. ===== //
  // ============================================ //
 
-$(document).ready(function(){
-
-  provide_woodbox();
-  console.log('enter options, wb built.');
-  console.log(woodbox);
-  init_options();
-
-});  //__ end of ( READY )
+ // not needed.
+$(document).ready(function(){});  //__ end of ( READY )
 
 
+ // obsolete, old stuff
 function init_options()
 {
-   // don't even try to start if the initiation went wrong.
-  if (  !woodbox  ||  !woodbox.initiated  ||  !woodbox.synched  ) {
-
-    console.log('[FLEX] Error: preferences initiation went wrong.');
-    return false;
-  }
-
-
    // --- preparation. --- //
 
   var
     i = 0, m = '',
     Obj = o = $check = null;
 
-   // ‹input› [id] := [name].
-  bloat_redundantly();
-
-
-
-   // for each preference
-  for ( m in woodbox.modules ) {
-
-    o = ( woodbox.modules[m] ) ? woodbox.modules[m] : {};
-
-     // validate currently iterated element as a preference.
-    $check = $('#'+ m);
-    if ( $check.length ) {
-
-
-   // --- load default preference values. --- //
-
-      if ( o !== undefined ) {
-        $check.prop( 'checked', o.state === ACTIVE );
-      }
-
-      else {
-        $check.prop( 'checked', o.defaultState === ACTIVE );
-      }
-
-
-   // --- make the checkboxes & co. insta-update the preferences object. --- //
-
-      $check.change(function(){
-        woodbox.write( this.id, (  (this.checked) ? ACTIVE : INACTIVE  ) );
-      });
-
-
-    }  // end of ( if valid preference )
-  }  // end of ( for each preference )
-
-
 
    // --- add clickability to the actual HTML. --- //
 
-  set_up_collapsed_expandability();
-  inject_question_marks();
-  all_or_nothing();
-  comment_icons();
+//  set_up_collapsed_expandability();
+//  inject_question_marks();
+//  all_or_nothing();
+//  comment_icons();
 
   test_import();  // import
   overlay_interactivity();
@@ -107,365 +449,9 @@ function init_options()
  // ============================================ //
 
 
-   // --- browser detection and individual extra initialization. --- //
-
-if (validate_storage()) {
-
-  switch (detect_browser()) {
-     // Opera
-    case 'o': {
-
-      console.log('[FLEX] Opera detected.');
-
-       // getting extension resources from within an injected script needs FileReader in Opera.
-       // But it's too slow to be used in the injected script, so I'm loading the resource here
-       // for future use. … MUCH easier in Chrome.
-      var
-        fr1 = null,     // I explicitly need one FileReader per task or else the timing will
-        fr2 = null,     // screw things up and overwrite earlier variables with the later values.
-        fr3 = null,
-        fr4 = null,
-        temp = null,
-        imgFile = null,
-        cssFile = null;
-
-
-       // CUSTOM QUICKLINKS BACKGROUND IMAGE
-      imgFile = opera.extension.getFile('/img/black-curtain-diag-stroke.png');
-      if (imgFile) {
-
-         // declare what to do upon execution.
-        fr1 = new FileReader();
-        fr1.onload = function() {
-          widget.preferences.resource_curtain_src = fr1.result;
-        };
-
-         // execute.
-        fr1.readAsDataURL(imgFile);
-      }
-
-       // FAVSLAND LOGO IMAGE
-      imgFile = opera.extension.getFile('/img/logo-favsland.png');
-      if (imgFile) {
-
-         // declare what to do upon execution.
-        fr3 = new FileReader();
-        fr3.onload = function() {
-          widget.preferences.resource_fl_logo_src = fr3.result;
-        };
-
-         // execute.
-        fr3.readAsDataURL(imgFile);
-      }
-
-       // TRACK++ PAUSE-PLAY IMAGE
-      imgFile = opera.extension.getFile('/img/pause-play.png');
-      if (imgFile) {
-
-         // declare what to do upon execution.
-        fr4 = new FileReader();
-        fr4.onload = function() {
-          widget.preferences.resource_pauseplay_src = fr4.result;
-        };
-
-         // execute.
-        fr4.readAsDataURL(imgFile);
-      }
-
-      cssFile = opera.extension.getFile('/css/style.css?v=1.0.2');
-      if (cssFile) {
-
-         // declare what to do upon execution.
-        fr2 = new FileReader();
-        fr2.onload = function(){
-          temp = fr2.result;
-           // skip the Byte Order Mark, if present.
-          if ( temp.charCodeAt(0) === 65279 ) {
-            temp = temp.substring(1);
-          }
-          widget.preferences.resource_css = temp;
-        };
-
-         // execute.
-        fr2.readAsText(cssFile);
-      }
-
-
-       // while you're at it, put on some makeup.
-      document.title = 'FLEX Preferences v'+ widget.version;
-
-      break;
-    }  // end of ( Opera )
-
-
-     // Chrome
-    case 'c': {
-      console.log('[FLEX] Chrome detected.');
-
-       // put on some makeup.
-      var man;
-      if (  chrome  &&  (man = chrome.runtime.getManifest())  ) {
-        document.title = 'FLEX Preferences v'+ man.version;
-      }
-
-      break;
-    }  // end of ( Chrome )
-
-
-     // Firefotz
-    case 'f': {
-      console.log('[FLEX] Firefotz detected.');
-
-       // put on some makeup.
-      //var man;
-      //if (  chrome  &&  (man = chrome.runtime.getManifest())  ) {
-      //  document.title = man.name +' v'+ man.version;
-      //}
-
-      break;
-    }  // end of ( Firefox )
-
-
-    default: {
-      console.log('[FLEX] unknown browser. Or maybe IE. I don´t care.');
-      break;
-    }
-
-  }  // end of ( switch case: detect browser )
-}  // end of ( valid storage )
-
-
-
-
-
- // opens the "explanation" popup and fills it with content dependent on the click.
-function explain_to_me( span )
-{
-  var
-    $ex = $('#explanation'),
-    $label = $(span).siblings('label'),
-    o = $label.find('input').attr('id'),
-    $reference = $('#header_banner'),
-    pos = 0;
-
-   // safety precaution.
-  if (  !woodbox  ||  !woodbox.modules  ||  !woodbox.modules[o]  ) {
-
-    console.log('[FLEX] Error: could not explain.');
-    return false;
-  }
-
-
-
-   // hide other overlay popups.
-  $('.overlay').stop().fadeOut(200);
-
-   // title.
-  $ex.find('h2').text( $label.find('span.title').text() );
-
-   // image.
-   //  reset classes.
-  $ex.find('img').attr('class', '');
-
-  if ( woodbox.modules[o].imgSource != '' ) {
-    $ex
-      .find('img')
-        .attr('src', 'img/'+ woodbox.modules[o].imgSource)
-        .addClass(o)
-        .show()
-    ;
-  }
-  else {
-    $ex.find('img').hide();
-  }
-
-   // description.
-  if ( woodbox.modules[o].description != '' ) {
-    $ex.find('p').html( woodbox.modules[o].description );
-  }
-
-   // box itself.
-//  pos = (  $reference.length  &&  $reference.offset()  )   // obsolete
-//      ? $reference.offset().left +20 : 200;
-//  $ex
-//    .stop().show().css({ left: -400 , opacity: 0 })
-//    .animate({left: pos, opacity: 1}, slidingTime);
-  $ex
-    .stop().show().css({ left: '-100%' , opacity: 0 })
-    .animate({left: '50%', opacity: 1}, slidingTime);
-}
-
- // closes the "explanation" popup.
-function youve_said_enough()
-{
-  $('#explanation').fadeOut(fadingTime);
-}
-
-
-
-
-
-
- // sets up the toggle gimmick FX for the preference groups.
-function set_up_collapsed_expandability()
-{
-  var
-    $groups = $('div.fieldset_group'),
-    collapsedHeight = 0;
-
-
-   // save height values for future use. First, when collapsed.
-  collapsedHeight = $groups.filter('.collapsed:first').height();
-
-   // save individual 'auto' values.
-  $groups.each(function(){
-
-    var
-      $el = $(this),
-      before = $el.height();
-
-    $el
-        // shortly set the height to auto and quickly read the value …
-      .css('height','auto')
-      .data('autoHeight', $el.height())
-        // … then reset to the way it was before.
-      .height(before);
-  });
-
-
-   // set up toggle functionality on clicking.
-  $groups.click(function(e){
-    var
-      $el = $(this),
-      $where_am_i = $(e.target),
-      auto = $el.data('autoHeight')
-    ;
-     // exclude the child elements from the toggling functionality. Checkboxes still need
-     // to work as checkboxes.
-    if ( $where_am_i.is('div.fieldset_group, h2') ) {
-
-       // toggle: collapsed –› expanded.
-      if ( $el.hasClass('collapsed') ) {
-
-         // safety precaution.
-        if (!auto) {
-          auto = 'auto';
-        }
-
-        $el
-          .stop().animate({ height: auto }, 200)
-          .removeClass('collapsed');
-      }
-
-       // toggle: expanded –› collapsed.
-      else {
-        $el
-          .stop().animate({ height: collapsedHeight }, 250)
-          .addClass('collapsed');
-      }
-      e.stopPropagation();
-      e.preventDefault();
-
-    }  // end of ( only container and h2 )
-  });  // end of ( click )
-}
-
-
-
-
- // does what it says.
-function inject_question_marks()
-{
-  $('div.fieldset_group label').after('<span class="help ug_icon">Explain this!</span>');
-
-  $('span.help').click(function(e){
-    explain_to_me(this);
-    e.stopPropagation();
-  });
-}
-
-
-
-
-
- // gives each relevant ‹input› an [id] which is exactly the same as the [name] attribute.
-function bloat_redundantly()
-{
-  $('.fieldset_group input').each(function(){
-
-    var $el = $(this);
-
-    if ( !$el.attr('id') ) {
-      $el.attr( 'id', $el.attr('name') );
-    }
-  });
-}
-
-
-
-
- // set up mutual influences between the checkboxes and the radios.
-function all_or_nothing()
-{
-  var
-    $checks = $('.fieldset_group :checkbox'),
-    $on = $(':radio[name="all_checkboxes"][value="on"]'),
-    $off = $(':radio[name="all_checkboxes"][value="off"]');
-
-
-   // make the checkboxes affect the radios.
-  $checks.change(function(){
-
-     // this.checked shows the result after the user clicked the checkbox.
-     // if any checkbox is activated by the user, uncheck the "deactivate all" radio box (if checked).
-    if (this.checked) {
-      $off.filter(':checked').prop('checked', false);
-    }
-
-     // if any checkbox is deactivated by the user, uncheck the "activate all" radio box (if checked).
-    else {
-      $on.filter(':checked').prop('checked', false);
-    }
-  });
-
-
-   // make the radios affect the checkboxes.
-  $on.click(function(){
-
-    $checks.prop('checked', true).each(function(){
-      woodbox.write( this.id, ACTIVE );
-    });
-  });
-  $off.click(function(){
-
-    $checks.prop('checked', false).each(function(){
-      woodbox.write( this.id, INACTIVE );
-    });
-  });
-}
 
  // ============================================ //
  // ============================================ //
-
-
-function comment_icons()
-{
-  var $infoline = $('#infoline');
-
-  $('.ug_icon')
-    .mouseenter(function(e){
-
-      var $src = $(e.target);
-
-      $infoline.find('.text').text( $src.text() );
-      $infoline.css({ left: $src.offset().left + $src.outerWidth() +2, top: $src.offset().top -2 });
-      $infoline.stop().fadeIn(150);
-    })
-    .mouseleave(function(){
-      $infoline.stop().fadeOut(150);
-    });
-}
-
 
 
  // qnd.  This is actually the setup, not an actual import.
