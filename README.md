@@ -18,8 +18,8 @@ re-imagined again and again ever since.
 
 External Links
 ----
-- [Chrome Web Store][c]
-- [Firefox AMO][f]
+- [FLEX in the Chrome Web Store][c]
+- [FLEX on Firefox AMO][f]
 
 [c]: https://chrome.google.com/webstore/detail/flex-%E2%80%93-favslist-expansion/pdgkaaddlnkbibdlfkbgppimjahejlca
 [f]: https://addons.mozilla.org/en-US/firefox/addon/flex-favslist-expansion/
